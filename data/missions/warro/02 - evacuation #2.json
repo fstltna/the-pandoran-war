@@ -1,0 +1,116 @@
+{
+	"name" : "Evacuation #2",
+	"description" : "We have identified around a dozen more stragglers that need to be brought in. Lead them to the evacuation point as before. Take caution: intelligence picked up encrypted signals that appear to match those used by the Pandorans for their transmissions. Enemy forces should be engaged and destroyed or routed on contact. Civilian losses should be minimised.",
+	"requires" : 8,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/oracleIX.png",
+	"music" : "music/battle/determination.mp3",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Rescue all civilians",
+			"targetName" : "Civilian",
+			"targetValue" : 12,
+			"targetType" : "TT_ESCAPED"
+		},
+		{
+			"description" : "Minimise civilian losses",
+			"targetName" : "Civilian",
+			"targetValue" : 2,
+			"targetType" : "TT_DESTROY",
+			"isCondition" : 1
+		},
+		{
+			"description" : "Eliminate Pandoran fighters",
+			"targetName" : "Jackal",
+			"targetValue" : 6,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		}
+	],
+	"player" : {
+		"pilot" : "1st Lt. Eliza Gaskin",
+		"squadron" : "The ABCs",
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES"
+	},
+	"fighters" : [
+		{
+			"number" : 3,
+			"types" : "Firefly",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 3000
+		},
+		{
+			"types" : "Civilian",
+			"number" : 4,
+			"name" : "Civilian",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 35,
+			"scatter" : 1500
+		},
+		{
+			"types" : "Civilian",
+			"number" : 4,
+			"name" : "Civilian",
+			"side" : "SIDE_ALLIES",
+			"x" : 30,
+			"y" : 35,
+			"scatter" : 1500
+		},
+		{
+			"types" : "Civilian",
+			"number" : 4,
+			"name" : "Civilian",
+			"side" : "SIDE_ALLIES",
+			"x" : 35,
+			"y" : 35,
+			"scatter" : 1500
+		}
+	],
+	"entities" : [
+		{
+			"name" : "Jumpgate",
+			"type" : "ET_JUMPGATE",
+			"x" : 25,
+			"y" : 25
+		}
+	],
+	"spawners" : [
+		{
+			"name" : "PandoranSpawner",
+			"types" : "Jackal",
+			"side" : "SIDE_PANDORAN",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE",
+			"step" : 2,
+			"interval" : 60,
+			"total" : 6,
+			"offscreen" : 1,
+			"active" : 0
+		}
+	],
+	"script"  : [
+		{
+			"function" : "TIME 60",
+			"lines" : [
+				"ACTIVATE_SPAWNER 1 PandoranSpawner",
+				"IMPORTANT_MSG_BOX Wingmate;Gaskin, INF fighters spotted! Pandorans, without a doubt!",
+				"MSG_BOX Gaskin;Break and attack! Protect the civilians!",
+				"WAIT_MSG_BOX",
+				"ACTIVATE_OBJECTIVES Eliminate Pandoran fighters"
+			]
+		},
+		{
+			"function" : "ALL_OBJECTIVES_COMPLETE",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Gaskin;That was a close one. Looks like they were scouting. We'll have to take extra precautions in future.",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"name" : "Ray",
+	"description" : "A well armed, armoured and shielded fighter, the Ray compliments a squadron of TAFs well, although it is not as fast nor as manoeuvrable. The Ray is so called due to its outward appearance being quite similar to that of Manta Ray. It also features two seats, though it is possible to fly with one crew members.",
+	"affiliation" : "CSN",
+	"health" : 70,
+	"shield" : 70,
+	"speed" : 1.85,
+	"reloadTime" : 16,
+	"shieldRechargeRate" : 60,
+	"texture" : "gfx/fighters/ray.png",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : -12,
+			"y" : -12
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 12,
+			"y" : -12
+		},
+		{
+			"type" : "BT_MAG",
+			"x" : -8,
+			"y" : -12
+		},
+		{
+			"type" : "BT_MAG",
+			"x" : 8,
+			"y" : -12
+		}
+	],
+	"missiles" : 4,
+	"flags" : "EF_TAKES_DAMAGE+EF_COMMON_FIGHTER"
+}

@@ -1,0 +1,170 @@
+{
+	"name" : "Trilliack Defence #4",
+	"description" : "The Pandorans are already deploying ground assault teams to Flint. The attack is in its early stages, with more troop carrier incoming. The enemy are meeting our defence lines aggressively, to clear a path for their landers. We need to hit back hard, and prevent Flint from being taken. Objective is simple: destroy all enemy forces.",
+	"requires" : 65,
+	"background" : "gfx/backgrounds/background05.jpg",
+	"planet" : "gfx/planets/flint.png",
+	"music" : "music/battle/Tactical Pursuit.mp3",
+	"epic" : {
+		"fighterLimit" : 24,
+		"unlimitedEnemies" : 1
+	},
+	"objectives" : [
+		{
+			"description" : "Destroy all enemy targets",
+			"targetName" : "ENEMY",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isEliminateAll" : 1
+		},
+		{
+			"description" : "Destroy HMS 711-444",
+			"targetName" : "HMS 711-444",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		},
+		{
+			"description" : "Destroy HMS 313-777",
+			"targetName" : "HMS 313-777",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		}
+	],
+	"player" : {
+		"type" : "ATAF",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "Lt. Cdr. Simon Dodds",
+		"squadron" : "White Knights",
+		"x" : 25,
+		"y" : 25
+	},
+	"fighters" : [
+		{
+			"types" : "TAF;Ray;Kingfisher;Rook;Hammerhead;Nymph;Firefly;Hyena-A;Hyena-B;Leopard;Lynx",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"number" : 125,
+			"scatter" : 5000
+		},
+		{
+			"types" : "Jackal;Mantis;Sphinx;Thunderhead;Shale;Razor;SK-31;SK-34;Blizzard",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 15,
+			"number" : 50,
+			"scatter" : 8000
+		}
+	],
+	"capitalShips" : [
+		{
+			"name" : "UNF Zenobia",
+			"types" : "UNF Corvette 01",
+			"side" : "SIDE_ALLIES",
+			"x" : 20,
+			"y" : 30,
+			"flags" : "+EF_AI_TARGET"
+		},
+		{
+			"name" : "UNF Lady Jane Grey",
+			"types" : "UNF Corvette 02",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 30,
+			"flags" : "+EF_AI_TARGET"
+		},
+		{
+			"name" : "CSN Tangka",
+			"types" : "CSN Corvette 02",
+			"side" : "SIDE_ALLIES",
+			"x" : 30,
+			"y" : 30,
+			"flags" : "+EF_AI_TARGET"
+		},
+		{
+			"groupName" : "CapShips",
+			"name" : "HMS 711-444",
+			"types" : "HMS Corvette 01",
+			"side" : "SIDE_PANDORAN",
+			"x" : -1,
+			"y" : 35,
+			"flags" : "+EF_AI_TARGET+EF_MISSION_TARGET",
+			"active" : 0
+		},
+		{
+			"groupName" : "CapShips",
+			"name" : "HMS 313-777",
+			"types" : "HMS Corvette 02",
+			"side" : "SIDE_PANDORAN",
+			"x" : 51,
+			"y" : 35,
+			"flags" : "+EF_AI_TARGET+EF_MISSION_TARGET",
+			"active" : 0
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Control;The Pandorans are overunning our front line! We need to drive them back, now!"
+			]
+		},
+		{
+			"function" : "ALLIES_KILLED 25",
+			"lines" : [
+				"MSG_BOX Control;We're losing fighters, rapidly. We need to focus our efforts on dividing the enemy up and taking them down together.",
+				"MSG_BOX Wingmate;Picking up incoming Tzac corvettes.",
+				"ACTIVATE_ENTITY_GROUPS CapShips",
+				"MSG_BOX Control;We need to take down those capital ships, right away. Lt. Cdr. Dodds, lead the strike.",
+				"MSG_BOX Dodds;On it!",
+				"WAIT_MSG_BOX",
+				"ACTIVATE_OBJECTIVES Destroy HMS 711-444;Destroy HMS 313-777"
+			]
+		},
+		{
+			"function" : "HMS 711-444",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Dodds;HMS 711-444 has been taken down."
+			]
+		},
+		{
+			"function" : "HMS 313-777",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Dodds;HMS 313-777 is out of the game."
+			]
+		},
+		{
+			"function" : "CAPITAL_SHIPS_LOST 1",
+			"lines" : [
+				"MSG_BOX Control;We're losing captial ships! We can't continue like this!"
+			]
+		},
+		{
+			"function" : "CAPITAL_SHIPS_LOST 2",
+			"lines" : [
+				"MSG_BOX Control;The Pandoran forces are closing in on Flint. They will commence planetary bombardment if allowed to get any closer."
+			]
+		},
+		{
+			"function" : "CAPITAL_SHIPS_LOST 3",
+			"lines" : [
+				"MSG_BOX Dodds;Dammit! That's all three of our corvettes down!",
+				"WAIT 10",
+				"MSG_BOX CSN Griffin;Dodds, Commodore Parks has ordered that you pull out immediately.",
+				"MSG_BOX Dodds;Griffin, what the hell? We can take them!",
+				"MSG_BOX CSN Griffin;That's a negative, Dodds. You're to return to the carrier, and prepare for withdrawal.",
+				"MSG_BOX Dodds;I'm not going to run away. Not again.",
+				"MSG_BOX Parks;Dodds, this is Commodore Park. I'm giving you a direct order. This isn't a battle we can win, and I'm not having you throw away your life or lose that starfighter. Get out, now. Final warning, mister.",
+				"MSG_BOX Dodds;Got it.",
+				"WAIT_MSG_BOX",
+				"WAIT 2",
+				"END_MISSION"
+			]
+		}
+	]
+}
+ 

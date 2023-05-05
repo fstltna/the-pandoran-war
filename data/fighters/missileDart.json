@@ -1,0 +1,11 @@
+{
+	"name" : "Missile Dart",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 15,
+	"speed" : 2.1,
+	"reloadTime" : 24,
+	"texture" : "gfx/fighters/dart01.png",
+	"missiles" : 999,
+	"flags" : "EF_TAKES_DAMAGE"
+}

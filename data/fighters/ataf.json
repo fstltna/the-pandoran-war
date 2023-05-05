@@ -1,0 +1,66 @@
+{
+	"name" : "ATAF",
+	"description" : "The Advanced Tactical Assault Fighter (ATAF) is the single most powerful single-seat starfighter in existence. Only five have so far been manufactured owing to their tremendous development costs (each one said to be on par with a carrier). Their existence and even those selected to participate in the training program have been a closely guarded secret within the CSN. It is the spiritual successor to the TAF upon which a great deal of its design was based.",
+	"affiliation" : "CSN",
+	"health" : 150,
+	"shield" : 2500,
+	"speed" : 2.25,
+	"reloadTime" : 8,
+	"shieldRechargeRate" : 5,
+	"texture" : "gfx/fighters/ataf.png",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : -5,
+			"y" : 0
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 5,
+			"y" : 0
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 9,
+			"y" : -4
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : -9,
+			"y" : -4
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 13,
+			"y" : -8
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : -13,
+			"y" : -8
+		},
+		{
+			"type" : "BT_LASER",
+			"x" : -5,
+			"y" : 0
+		},
+		{
+			"type" : "BT_LASER",
+			"x" : 5,
+			"y" : 0
+		},
+		{
+			"type" : "BT_MAG",
+			"x" : -5,
+			"y" : 0
+		},
+		{
+			"type" : "BT_MAG",
+			"x" : 5,
+			"y" : 0
+		}
+	],
+	"missiles" : 4,
+	"flags" : "EF_NO_EPIC+EF_TAKES_DAMAGE+EF_IMMORTAL",
+	"aiFlags" : "AIF_UNLIMITED_RANGE"
+}

@@ -1,0 +1,130 @@
+{
+	"name" : "Coyote Assault #3",
+	"description" : "The assault isn't going as well as we want, and we're beginning to suffer heavy losses as the Pandoran forces overwhelm us. However, we need to continue the fight back, and attempt to hold the enemy here. They cannot be allowed to advance further in to Independent space.",
+	"requires" : 8,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/mythos.png",
+	"music" : "music/battle/Tactical Pursuit.mp3",
+	"epic" : {
+		"fighterLimit" : 12,
+		"unlimitedEnemies" : 1,
+		"lives" : 12
+	},
+	"objectives" : [
+		{
+			"description" : "Destroy all enemy targets",
+			"targetName" : "Pandoran",
+			"targetValue" : 250,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Retreat to jumpgate",
+			"targetName" : "Player",
+			"targetValue" : 1,
+			"targetType" : "TT_ESCAPED",
+			"active" : 0
+		}
+	],
+	"player" : {
+		"type" : "TAF",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "(Multiple)",
+		"squadron" : "(Multiple)"
+	},
+	"fighters" : [
+		{
+			"types" : "Firefly;Nymph;TAF;Ray;Leopard;Hyena-A;Hyena-B;Kingfisher",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"number" : 95,
+			"scatter" : 5000
+		},
+		{
+			"groupName" : "Pandoran",
+			"types" : "Jackal;Mantis;Sphinx",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 15,
+			"number" : 250,
+			"scatter" : 5000
+		},
+		{
+			"name" : "de Winter",
+			"groupName" : "ATAFs",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"active" : 0
+		},
+		{
+			"name" : "Dodds",
+			"groupName" : "ATAFs",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"active" : 0
+		},
+		{
+			"name" : "ATAF",
+			"groupName" : "ATAFs",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"number" : 3,
+			"scatter" : 500,
+			"active" : 0
+		},
+		{
+			"types" : "Firefly;Nymph;TAF;Ray;Leopard;Hyena-A;Hyena-B;Kingfisher",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"number" : 25,
+			"scatter" : 5000
+		}
+	],
+	"entities" : [
+		{
+			"name" : "Jumpgate",
+			"type" : "ET_JUMPGATE",
+			"x" : 25,
+			"y" : 25,
+			"flags" : "+EF_DISABLED"
+		}
+	],
+	"script" : [
+		{
+			"function" : "ALLIES_KILLED 70",
+			"lines" : [
+				"MSG_BOX UNF Wingmate #1;We're getting our arses kicked here! Any chance of any backup?!"
+			]
+		},
+		{
+			"function" : "ALLIES_KILLED 80",
+			"lines" : [
+				"MSG_BOX UNF Wingmate #2;The White Knights are here! Finally!",
+				"ACTIVATE_ENTITY_GROUPS ATAFs"
+			]
+		},
+		{
+			"function" : "ALLIES_KILLED 90",
+			"lines" : [
+				"IMPORTANT_MSG_BOX UNF Talos;All fighters, Captain Bailey has signalled the retreat. Coyote is lost. Fall back to the jumpgate.",
+				"ACTIVATE_OBJECTIVE Retreat to jumpgate",
+				"MSG_BOX de Winter;You all heard the Captain - fall back, we'll cover the retreat.",
+				"MSG_BOX Dodds;Estelle, we've got this. We can take them.",
+				"MSG_BOX de Winter;We're suffering too many losses, Dodds. Fall back now, that's an order.",
+				"WAIT_MSG_BOX",
+				"ACTIVATE_JUMPGATE 1",
+				"RETREAT_ALLIES"
+			]
+		}
+	]
+}
+ 

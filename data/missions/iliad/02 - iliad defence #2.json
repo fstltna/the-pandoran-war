@@ -1,0 +1,45 @@
+{
+	"name" : "Iliad Defence #2",
+	"description" : "The Pandoran war machine has commenced its advancement beyond Mitikas space. We must prepare to defend Iliad from this powerful foe. Exercise caution: despite outnumbering the enemy units that have entered our space, the Pandorans are said to be relentless in battle, and this small number could well still test us.",
+	"requires" : 18,
+	"background" : "gfx/backgrounds/background01.jpg",
+	"planet" : "gfx/planets/diso.png",
+	"music" : "music/battle/Tactical Pursuit.mp3",
+	"epic" : {
+		"fighterLimit" : 12,
+		"lives" : 12
+	},
+	"objectives" : [
+		{
+			"description" : "Destroy all enemy targets",
+			"targetName" : "ENEMY",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isEliminateAll" : 1
+		}
+	],
+	"player" : {
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "(Multiple)",
+		"squadron" : "(Multiple)"
+	},
+	"fighters" : [
+		{
+			"types" : "Firefly;Nymph;Hyena-B",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 24,
+			"number" : 75,
+			"scatter" : 5000
+		},
+		{
+			"types" : "Jackal",
+			"side" : "SIDE_PANDORAN",
+			"x" : 35,
+			"y" : 30,
+			"number" : 50,
+			"scatter" : 5000
+		}
+	]
+}

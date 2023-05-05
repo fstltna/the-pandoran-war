@@ -1,0 +1,92 @@
+[
+	{
+		"name" : "resume",
+		"group" : "challengesMenu",
+		"type" : "WT_BUTTON",
+		"text" : "Resume",
+		"x" : -1,
+		"y" : 170,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "stats",
+		"group" : "challengesMenu",
+		"type" : "WT_BUTTON",
+		"text" : "Stats",
+		"x" : -1,
+		"y" : 250,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "fighterDB",
+		"group" : "challengesMenu",
+		"type" : "WT_BUTTON",
+		"text" : "Fighter Database",
+		"x" : -1,
+		"y" : 330,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "trophies",
+		"group" : "challengesMenu",
+		"type" : "WT_BUTTON",
+		"text" : "Trophies",
+		"x" : -1,
+		"y" : 410,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "options",
+		"group" : "challengesMenu",
+		"type" : "WT_BUTTON",
+		"text" : "Options",
+		"x" : -1,
+		"y" : 490,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "quit",
+		"group" : "challengesMenu",
+		"type" : "WT_BUTTON",
+		"text" : "Return to Title",
+		"x" : -1,
+		"y" : 570,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "start",
+		"group" : "challenges",
+		"type" : "WT_BUTTON",
+		"text" : "Start Challenge Mission",
+		"x" : -1,
+		"y" : 680,
+		"w" : 250,
+		"h": 34
+	},
+	{
+		"name" : "prev",
+		"group" : "challenges",
+		"type" : "WT_IMG_BUTTON",
+		"x" : 540,
+		"y" : 110,
+		"w" : 150,
+		"h": 34,
+		"texture" : "gfx/widgets/optionsLeft.png"
+	},
+	{
+		"name" : "next",
+		"group" : "challenges",
+		"type" : "WT_IMG_BUTTON",
+		"x" : 720,
+		"y" : 110,
+		"w" : 150,
+		"h": 34,
+		"texture" : "gfx/widgets/optionsRight.png"
+	}
+]

@@ -1,0 +1,46 @@
+{
+	"name" : "Coyote Assault #2",
+	"description" : "The initial fight back against the Pandorans has gone well, but the system is still choked with their forces. We need to continue to engage them and force them to abandon the system.",
+	"requires" : 4,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/mythos.png",
+	"music" : "music/battle/Tactical Pursuit.mp3",
+	"epic" : {
+		"fighterLimit" : 12,
+		"lives" : 12
+	},
+	"objectives" : [
+		{
+			"description" : "Destroy all enemy targets",
+			"targetName" : "ENEMY",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isEliminateAll" : 1
+		}
+	],
+	"player" : {
+		"type" : "TAF",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "(Multiple)",
+		"squadron" : "(Multiple)"
+	},
+	"fighters" : [
+		{
+			"types" : "Firefly;Nymph;TAF;Ray;Leopard;Hyena-A;Hyena-B;Kingfisher",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"number" : 95,
+			"scatter" : 5000
+		},
+		{
+			"types" : "Jackal;Mantis;Sphinx",
+			"side" : "SIDE_PANDORAN",
+			"x" : 35,
+			"y" : 25,
+			"number" : 75,
+			"scatter" : 5000
+		}
+	]
+}
+ 

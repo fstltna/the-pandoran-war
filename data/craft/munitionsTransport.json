@@ -1,0 +1,12 @@
+{
+	"name" : "Munitions Transport",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 150,
+	"shield" : 50,
+	"speed" : 1.5,
+	"reloadTime" : 10,
+	"texture" : "gfx/craft/munitionsTransport.png",
+	"flags" : "EF_TAKES_DAMAGE",
+	"aiFlags" : "AIF_AVOIDS_COMBAT"
+}

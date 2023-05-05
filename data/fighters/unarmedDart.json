@@ -1,0 +1,10 @@
+{
+	"name" : "Unarmed Dart",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 15,
+	"speed" : 2.1,
+	"reloadTime" : 24,
+	"texture" : "gfx/fighters/dart01.png",
+	"flags" : "EF_TAKES_DAMAGE"
+}

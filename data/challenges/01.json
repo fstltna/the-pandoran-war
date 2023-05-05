@@ -1,0 +1,44 @@
+{
+	"name" : "Destroy all Darts #1",
+	"description" : "Destroy all Darts #1",
+	"background" : "AUTO",
+	"planet" : "AUTO",
+	"music" : "AUTO",
+	"player" : {
+		"type" : "Nymph",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "-",
+		"squadron" : "-",
+		"x" : 25,
+		"y" : 25
+	},
+	"challenge" : {
+		"timeLimit" : 30,
+		"killLimit" : 5,
+		"challenges" : [
+			{
+				"type" : "CHALLENGE_TIME",
+				"value" : 30
+			},
+			{
+				"type" : "CHALLENGE_TIME",
+				"value" : 15
+			},
+			{
+				"type" : "CHALLENGE_SHOT_ACCURACY",
+				"value" : 75
+			}
+		]
+	},
+	"fighters" : [
+		{
+			"name" : "Dart",
+			"types" : "Simple Dart",
+			"side" : "SIDE_PIRATE",
+			"x" : 25,
+			"y" : 22,
+			"number" : 5,
+			"scatter" : 1000
+		}
+	]
+}

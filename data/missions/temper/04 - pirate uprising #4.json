@@ -1,0 +1,95 @@
+{
+	"name" : "Pirate Uprising #4",
+	"description" : "It took some time, but we have finally been able to extract the required information from the lieutenant we captured. His information has revealed that the pirates have formed a coalition to take advantage of the brewing war. We need to smash this alliance apart by targetting the faction leaders. They are currently fleeing an earlier ambush, one designed to send them your way. The leaders are all piloting acquired Nymphs. Take them down.",
+	"requires" : 5,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/spirit.png",
+	"music" : "music/battle/battleThemeA.mp3",
+	"objectives" : [
+		{
+			"description" : "Eliminate pirate leaders",
+			"targetName" : "Pirate Leader",
+			"targetValue" : 4,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Destroy all remaining opposition",
+			"targetName" : "Dart",
+			"targetValue" : 26,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Do not let any pirate leaders escape",
+			"targetName" : "Pirate Leader",
+			"targetValue" : 1,
+			"targetType" : "TT_ESCAPED",
+			"isCondition" : 1
+		}
+	],
+	"player" : {
+		"type" : "TAF",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "Cdr. Katherine Strickland",
+		"squadron" : "Steel Bulls",
+		"x" : 10,
+		"y" : 25
+	},
+	"fighters" : [
+		{
+			"types" : "TAF;Ray",
+			"number" : 5,
+			"side" : "SIDE_ALLIES",
+			"x" : 10,
+			"y" : 25,
+			"scatter" : 300
+		},
+		{
+			"types" : "Rook",
+			"number" : 3,
+			"side" : "SIDE_ALLIES",
+			"x" : 40,
+			"y" : 25
+		},
+		{
+			"name" : "Pirate Leader",
+			"types" : "Nymph",
+			"number" : 4,
+			"side" : "SIDE_PIRATE",
+			"x" : 25,
+			"y" : 25,
+			"flags" : "+EF_MISSION_TARGET",
+			"aiFlags" : "AIF_RETREATS"
+		},
+		{
+			"name" : "Dart",
+			"types" : "Dart",
+			"number" : 26,
+			"side" : "SIDE_PIRATE",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 2250
+		}
+	],
+	"entities" : [
+		{
+			"name" : "Jumpgate",
+			"type" : "ET_JUMPGATE",
+			"x" : 8,
+			"y" : 25
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Strickland;This is a straight forward one, guys: take down all enemy targets. But make sure none of those Nymphs make it to the jumpgate."
+			]
+		},
+		{
+			"function" : "ALL_OBJECTIVES_COMPLETE",
+			"lines" : [
+				"MSG_BOX Strickland;Excellent works, people. This one's a wrap."
+			]
+		}
+	]
+}

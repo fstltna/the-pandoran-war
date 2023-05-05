@@ -1,0 +1,10 @@
+{
+	"name" : "Static Dart",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 15,
+	"speed" : 0,
+	"reloadTime" : 24,
+	"texture" : "gfx/fighters/dart01.png",
+	"flags" : "EF_TAKES_DAMAGE"
+}

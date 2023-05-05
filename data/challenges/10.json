@@ -1,0 +1,65 @@
+{
+	"name" : "Rescue Civilians",
+	"description" : "Rescue Civilians",
+	"background" : "AUTO",
+	"planet" : "AUTO",
+	"music" : "AUTO",
+	"player" : {
+		"type" : "Tug",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "-",
+		"squadron" : "-",
+		"x" : 25,
+		"y" : 25
+	},
+	"challenge" : {
+		"rescueLimit" : 8,
+		"timeLimit" : 300,
+		"allowPlayerDeath" : 1,
+		"challenges" : [
+			{
+				"type" : "CHALLENGE_RESCUE",
+				"value" : 4
+			},
+			{
+				"type" : "CHALLENGE_RESCUE",
+				"value" : 5
+			},
+			{
+				"type" : "CHALLENGE_RESCUE",
+				"value" : 8
+			}
+		]
+	},
+	"fighters" : [
+		{
+			"types" : "Civilian",
+			"x" : 25,
+			"y" : 25,
+			"side" : "SIDE_ALLIES",
+			"flags" : "+EF_DISABLED+EF_NO_KILL",
+			"number" : 8,
+			"scatter" : 5000
+		}
+	],
+	"entities" : [
+		{
+			"name" : "Jumpgate",
+			"type" : "ET_JUMPGATE",
+			"x" : 25,
+			"y" : 25
+		}
+	],
+	"spawners" : [
+		{
+			"name" : "spawner",
+			"types" : "Dart",
+			"side" : "SIDE_PIRATE",
+			"interval" : 30,
+			"total" : -1,
+			"step" : 1,
+			"offscreen" : 1,
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		}
+	]
+}

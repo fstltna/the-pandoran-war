@@ -1,0 +1,19 @@
+{
+	"name" : "Swarmer",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 5,
+	"speed" : 2,
+	"reloadTime" : 8,
+	"texture" : "gfx/fighters/swarmer.png",
+	"guns" : [
+		{
+			"type" : "BT_PARTICLE",
+			"x" : 0,
+			"y" : 0
+		}
+	],
+	"deathType" : "DT_SIMPLE",
+	"flags" : "EF_TAKES_DAMAGE",
+	"aiFlags" : "AIF_UNLIMITED_RANGE"
+}

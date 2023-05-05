@@ -1,0 +1,44 @@
+{
+	"name" : "Destroy all Darts #3",
+	"description" : "Destroy all Darts #3",
+	"background" : "AUTO",
+	"planet" : "AUTO",
+	"music" : "AUTO",
+	"player" : {
+		"type" : "Nymph",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "-",
+		"squadron" : "-",
+		"x" : 25,
+		"y" : 25
+	},
+	"challenge" : {
+		"timeLimit" : 45,
+		"killLimit" : 3,
+		"challenges" : [
+			{
+				"type" : "CHALLENGE_TIME",
+				"value" : 20
+			},
+			{
+				"type" : "CHALLENGE_ARMOUR",
+				"value" : 80
+			},
+			{
+				"type" : "CHALLENGE_SHOT_ACCURACY",
+				"value" : 50
+			}
+		]
+	},
+	"fighters" : [
+		{
+			"name" : "Nymph",
+			"types" : "Nymph",
+			"side" : "SIDE_TZAC",
+			"x" : 25,
+			"y" : 22,
+			"number" : 3,
+			"scatter" : 1000
+		}
+	]
+}

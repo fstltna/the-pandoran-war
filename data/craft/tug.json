@@ -1,0 +1,18 @@
+{
+	"name" : "Tug",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 50,
+	"speed" : 1.85,
+	"reloadTime" : 10,
+	"texture" : "gfx/craft/tug.png",
+	"guns" : [
+		{
+			"type" : "BT_PARTICLE",
+			"x" : 0,
+			"y" : 0
+		}
+	],
+	"flags" : "EF_HAS_ROPE+EF_TAKES_DAMAGE",
+	"aiFlags" : "AIF_AVOIDS_COMBAT+AIF_TOWS"
+}

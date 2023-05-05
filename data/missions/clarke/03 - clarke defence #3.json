@@ -1,0 +1,134 @@
+{
+	"name" : "Clarke Defence #3",
+	"description" : "We need continue taking down the enemy's captial ships, digging in, and holding the line here. More of our own cap ships are heading up the field to meet the Pandorans head on. UNF Cleopatra and UNF Artemis are moving to intercept more enemy corvettes. Your orders are to assist them in achieving their goals.",
+	"requires" : 18,
+	"background" : "gfx/backgrounds/background06.jpg",
+	"planet" : "gfx/planets/lewis.png",
+	"music" : "music/battle/Vehicle - OGA - Col Legno.ogg",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Destroy INF Khopesh",
+			"targetName" : "INF Khopesh",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Destroy INF Blackjack",
+			"targetName" : "INF Blackjack",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Eliminate support fighters",
+			"targetName" : "Pandoran",
+			"targetValue" : 6,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Protect UNF Cleopatra",
+			"targetName" : "UNF Cleopatra",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isCondition": 1
+		},
+		{
+			"description" : "Protect UNF Artemis",
+			"targetName" : "UNF Artemis",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isCondition": 1
+		}
+	],
+	"player" : {
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "1st Lt. Angus Carlyle",
+		"squadron" : "Sentinels",
+		"x" : 45,
+		"y" : 45
+	},
+	"fighters" : [
+		{
+			"types" : "Firefly;Leopard;Lynx",
+			"side" : "SIDE_ALLIES",
+			"x" : 45,
+			"y" : 45,
+			"number" : 12,
+			"scatter" : 500,
+			"aiFlags" : "+AIF_MOVES_TO_LEADER"
+		},
+		{
+			"groupName" : "Pandoran",
+			"types" : "Jackal;Sphinx;Mantis",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 25,
+			"number" : 6,
+			"scatter" : 20000,
+			"aiFlags" : "+AIF_MOVES_TO_LEADER"
+		}
+	],
+	"capitalShips" : [
+		{
+			"name" : "INF Khopesh",
+			"types" : "INF Corvette 01",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 15,
+			"flags" : "+EF_AI_LEADER+EF_AI_TARGET"
+		},
+		{
+			"name" : "INF Blackjack",
+			"types" : "INF Corvette 02",
+			"side" : "SIDE_PANDORAN",
+			"x" : 40,
+			"y" : 25,
+			"flags" : "+EF_AI_LEADER+EF_AI_TARGET"
+		},
+		{
+			"name" : "UNF Cleopatra",
+			"types" : "UNF Corvette 01",
+			"side" : "SIDE_ALLIES",
+			"x" : 46,
+			"y" : 45,
+			"flags" : "+EF_AI_LEADER+EF_AI_TARGET"
+		},
+		{
+			"name" : "UNF Artemis",
+			"types" : "UNF Corvette 02",
+			"side" : "SIDE_ALLIES",
+			"x" : 44,
+			"y" : 45,
+			"flags" : "+EF_AI_LEADER+EF_AI_TARGET"
+		}
+	],
+	"script" : [
+		{
+			"function" : "Destroy INF Khopesh",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Carlyle;INF Khopesh is down."
+			]
+		},
+		{
+			"function" : "Destroy INF Blackjack",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Carlyle;INF Blackjack has been destroyed."
+			]
+		},
+		{
+			"function" : "ALL_OBJECTIVES_COMPLETE",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Carlyle;This is Carlyle. Enemy targets have been eliminated. Cleopatra and Artemis still in one piece.",
+				"MSG_BOX Control;Acknowledged. Fall back to the main fleet and await new instructions.",
+				"MSG_BOX Carlyle;This is going to be a long day, eh?",
+				"MSG_BOX Control;Maybe not, if we continue to lose ground the way we are already ...",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}

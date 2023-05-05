@@ -1,0 +1,76 @@
+{
+	"name" : "Pirate Uprising #1",
+	"description" : "The Pandorans' push in to Independent space has led to a surge in pirate activity along the Confederation border. The threat needs to be dealt with immediately, starting with cutting back on the enemy presence at Temper.",
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/spirit.png",
+	"music" : "music/battle/battleThemeA.mp3",
+	"objectives" : [
+		{
+			"description" : "Eliminate Darts",
+			"targetName" : "Dart",
+			"targetValue" : 30,
+			"targetType" : "TT_DESTROY"
+		}
+	],
+	"player" : {
+		"type" : "TAF",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "Cdr. Katherine Strickland",
+		"squadron" : "Steel Bulls"
+	},
+	"fighters" : [
+		{
+			"types" : "TAF",
+			"name" : "Heywood",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 250,
+			"flags" : "+EF_IMMORTAL"
+		},
+		{
+			"types" : "TAF",
+			"number" : 3,
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 250
+		},
+		{
+			"name" : "Dart",
+			"types" : "Simple Dart",
+			"number" : 10,
+			"side" : "SIDE_PIRATE",
+			"x" : 27,
+			"y" : 35,
+			"scatter" : 2000
+		},
+		{
+			"types" : "Simple Dart",
+			"name" : "Dart",
+			"number" : 10,
+			"side" : "SIDE_PIRATE",
+			"x" : 20,
+			"y" : 15,
+			"scatter" : 2000
+		},
+		{
+			"name" : "Dart",
+			"types" : "Simple Dart",
+			"number" : 10,
+			"side" : "SIDE_PIRATE",
+			"x" : 15,
+			"y" : 35,
+			"scatter" : 2000
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Heywood;Multiple incoming enemy fighters.",
+				"MSG_BOX Strickland;Follow my lead. Break and attack at will."
+			]
+		}
+	]
+}

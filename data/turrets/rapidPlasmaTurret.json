@@ -1,0 +1,21 @@
+{
+	"name" : "Rapid Plasma Turret",
+	"description" : "",
+	"affiliation" : "",
+	"health" : 150,
+	"shield" : 25,
+	"speed" : 0,
+	"reloadTime" : 8,
+	"shieldRechargeRate" : 10,
+	"texture" : "gfx/cannons/singlePlasmaTurret.png",
+	"deathType" : "DT_NO_SPIN",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : 0,
+			"y" : 0
+		}
+	],
+	"flags" : "EF_TAKES_DAMAGE",
+	"aiFlags" : "AIF_AGGRESSIVE+AIF_LONG_RANGE_FIRE"
+}

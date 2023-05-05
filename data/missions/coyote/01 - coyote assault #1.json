@@ -1,0 +1,188 @@
+{
+	"name" : "Coyote Assault #1",
+	"description" : "Though we suffered heavy losses at Coyote, it is still important that we attempt to prevent, or at least slow, the Pandoran war machine's advance. Admiral Jenkins has ordered that the White Knights lead an attack on the enemy forces gathered in the system. The weight of the opposing forces remains tremendous, though the ATAFs should help to give us the edge in battle. Be advised that the enemy are now in possession of UNF fighter craft.",
+	"requires" : 2,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/mythos.png",
+	"music" : "music/battle/Vehicle - OGA - Col Legno.ogg",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Destroy all enemy targets",
+			"targetName" : "ENEMY",
+			"targetValue" : 100,
+			"targetType" : "TT_DESTROY",
+			"isEliminateAll" : 1
+		}
+	],
+	"player" : {
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "Lt. Cdr. Gordon Stone",
+		"squadron" : "Atom Smashers"
+	},
+	"fighters" : [
+		{
+			"name" : "de Winter",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"flags" : "+EF_AI_LEADER",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		},
+		{
+			"name" : "Dodds",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"flags" : "+EF_AI_LEADER",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		},
+		{
+			"name" : "Koonan",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"flags" : "+EF_AI_LEADER",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		},
+		{
+			"name" : "Taylor",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"flags" : "+EF_AI_LEADER",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		},
+		{
+			"name" : "Todd",
+			"types" : "ATAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"flags" : "+EF_AI_LEADER",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		},
+		{
+			"types" : "Firefly;Leopard;Hyena-A;Hyena-B",
+			"number" : 6,
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500,
+			"aiFlags" : "+AIF_MOVES_TO_LEADER"
+		},
+		{
+			"types" : "Jackal;Sphinx;Nymph",
+			"number" : 25,
+			"side" : "SIDE_PANDORAN",
+			"x" : 15,
+			"y" : 15,
+			"scatter" : 2500
+		},
+		{
+			"groupName" : "pandoran-2",
+			"types" : "Jackal;Sphinx;Nymph",
+			"number" : 25,
+			"side" : "SIDE_PANDORAN",
+			"x" : 30,
+			"y" : 30,
+			"scatter" : 2500,
+			"active" : 0
+		},
+		{
+			"groupName" : "pandoran-3",
+			"types" : "Jackal;Sphinx;Nymph",
+			"number" : 25,
+			"side" : "SIDE_PANDORAN",
+			"x" : 15,
+			"y" : 15,
+			"scatter" : 2500,
+			"active" : 0
+		},
+		{
+			"groupName" : "pandoran-4",
+			"types" : "Nymph",
+			"number" : 25,
+			"side" : "SIDE_PANDORAN",
+			"x" : 30,
+			"y" : 30,
+			"scatter" : 2500,
+			"active" : 0
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX de Winter;All fighters, this is Commander de Winter. Enemy targets sighted, engage at will."
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 20",
+			"lines" : [
+				"MSG_BOX Koonan;More enemies inbound.",
+				"ACTIVATE_ENTITY_GROUPS pandoran-2"
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 45",
+			"lines" : [
+				"ACTIVATE_ENTITY_GROUPS pandoran-3"
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 70",
+			"lines" : [
+				"ACTIVATE_ENTITY_GROUPS pandoran-4"
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 90",
+			"lines" : [
+				"MSG_BOX Stone;Man, I've got to get me one of those!"
+			]
+		},
+		{
+			"function" : "TIME 10",
+			"lines" : [
+				"MSG_BOX Stone;What the hell are those things you're flying?",
+				"MSG_BOX Dodds;An ATAF. Stands for Advanced Tactical Assault Fighter."
+			]
+		},
+		{
+			"function" : "TIME 50",
+			"lines" : [
+				"MSG_BOX Stone;Are the CSN rolling those out to everyone?",
+				"MSG_BOX Todd;No, they ... were built for a different purpose."
+			]
+		},
+		{
+			"function" : "TIME 80",
+			"lines" : [
+				"MSG_BOX Stone;What sort of purpose?",
+				"MSG_BOX de Winter;Sorry, for now, that's classified."
+			]
+		},
+		{
+			"function" : "ALL_OBJECTIVES_COMPLETE",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX de Winter;Griffin, this is de Winter. All targets destroyed.",
+				"MSG_BOX CSN Griffin;Acknowledged, Commander. Stand by for new orders.",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}
+ 

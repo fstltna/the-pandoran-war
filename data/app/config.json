@@ -1,0 +1,43 @@
+{
+	"winWidth" : 1280,
+	"winHeight" : 720,
+	"fullscreen" : 0,
+	"musicVolume" : 8,
+	"soundVolume" : 10,
+	"controls" : {
+		"keys" : {
+			"CONTROL_FIRE" : 0,
+			"CONTROL_ACCELERATE" : 0,
+			"CONTROL_BOOST" : 26,
+			"CONTROL_ECM" : 7,
+			"CONTROL_BRAKE" : 22,
+			"CONTROL_TARGET" : 4,
+			"CONTROL_MISSILE" : 44,
+			"CONTROL_GUNS" : 29,
+			"CONTROL_RADAR" : 27,
+			"CONTROL_PREV_FIGHTER" : 4,
+			"CONTROL_NEXT_FIGHTER" : 7,
+			"CONTROL_SCREENSHOT" : 69
+		},
+		"mouse" : 	{
+			"CONTROL_FIRE" : 1,
+			"CONTROL_ACCELERATE" : 3,
+			"CONTROL_BOOST" : 0,
+			"CONTROL_ECM" : 0,
+			"CONTROL_BRAKE" : 0,
+			"CONTROL_TARGET" : 0,
+			"CONTROL_MISSILE" : 2,
+			"CONTROL_GUNS" : 4,
+			"CONTROL_RADAR" : 5,
+			"CONTROL_PREV_FIGHTER" : 4,
+			"CONTROL_NEXT_FIGHTER" : 5,
+			"CONTROL_SCREENSHOT" : 0
+		}
+	},
+	"gameplay" : {
+		"friendlyFire" : 0,
+		"autoSwitchPlayerTarget" : 1,
+		"missileReTarget" : 0,
+		"healthBars" : 1
+	}
+}

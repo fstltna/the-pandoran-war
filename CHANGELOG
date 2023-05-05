@@ -1,0 +1,201 @@
+Changelog
+
+1.5
+
+	* Game now renders at chosen resolution instead of scaling up from 1280 x 720
+	* Added command line switch -size to allow for custom window sizes.
+		- For example: -size 900x600 for a width and height of 900 x 600.
+	* Minimum resolution is now 1280 x 720
+	* Graphics and fonts now use texture atlases to help with performance.
+	* Misc. bug fixes.
+
+1.4
+
+	* Add Mac make file
+	* Added ca, da, es, fr, it, nl, pl, and sv po files, created using Google Translate (quality will be low; used as a starting point).
+	* Numerous compile and runtime fixes.
+
+1.3
+
+	* Added a fighter database, to view information about the in-game fighters
+
+1.2
+
+	* Reduced missile damage from 75pts to 50pts.
+	* Rebalanced some missions, due to missile damage reduction.
+	* Fixed numerous mission bugs.
+	* Surrendering vessels will now fly away slower, to allow the player to catch them more easily.
+	* Music pauses when window focus is lost.
+
+1.11
+
+	* Uncoupled event handling from frame rate.
+	* Show move-like directional cursor when dragging galactic map.
+
+1.1
+
+	* Epic missions now have limited "lives". A player can only be killed a certain number of times before they automatically fail the mission. This is to discourage reckless play.
+
+1.01
+	
+	* Corrected "Nation of Tzac" to "Kingdom of Tzac" in a few cases
+	* Fixed broken REVISION makefile macro when git is not available
+
+1.0
+
+	* Campaign fixes
+	* Mouse is now restricted to game window when in battle
+	* Campaign missions can now be freely played after finishing the game
+	* Some trophy requirements were reduced, to make them easier to get
+
+0.99
+
+	* Fixed a bug with switching guns when ship has no guns
+	* Made Bodyguard and Team Player trophies easier to achieve
+	* Campaign tweaks and bugs fixes
+
+0.98
+
+	* Campaign tweaks and bugs fixes
+	* Challenge updates
+
+0.97
+
+	* Campaign tweaks and bugs fixes
+	* Challenge updates
+
+0.96
+
+	* Campaign tweaks and bugs fixes
+
+0.95
+	
+	* AI fixes
+	* Campaign tweaks and bugs fixes
+	* Reset entity owner when detaching tow rope
+
+0.94
+
+	* Campaign tweaks and bug fixes
+	* Challenge tweaks and fixes
+	* Stats bug fix
+
+0.93
+
+	* Campaign tweaks and bug fixes
+	* Made ATAFs immortal by default (low impact on difficulty)
+	* Lowered difficulty of some missions
+
+0.92
+	
+	* Campaign tweaks and bug fixes
+
+0.91
+	
+	* New music track by Vehicle
+	* Added effects when bullets hit targets
+	* Updated Mantis sprite
+	* Updated UNF Corvette 02 sprite
+	* Player (and team) now face direction of nearest target at start of mission
+	* Performance improvements, via i18n updates
+	* Misc. tweaks and fixes
+
+0.9
+	
+	* Added final campaign missions
+	* Added final challenges
+	* Enabled all trophies
+	* Added new sound effects
+
+0.8
+
+	* New campaign missions
+	* New challenges
+	* Added optional missions, set in Pandoran space
+	* New trophies and stats
+
+0.7
+
+	* Added trophies
+	* New campaign missions
+	* New challenges
+	* Added new INF fighter: the Angel (rarely used)
+	* Messagebox speakers are now highlighted
+	* New Capital Ships
+
+0.6
+
+	* New Campaign missions
+	* Added new fighters: Blizzard, Razor, Shale, SK-31, and SK-34, part of the troublesome Kingdom of Tzac
+	* Added control remapping
+	* Added mines
+	* New game mode: Challenges
+	* Added i18n support
+	* Added start of German translation
+
+0.51
+
+	* Fixed a mission loading bug on Linux.
+
+0.5
+
+	* Added capital ships
+	* Added a number of new missions
+	* Added Mag cannon training mission, at Sol
+	* Star systems can be fall to the Pandorans (campaign related, unavoidable)
+	* New craft: the Lynx, a UNF bomber, and supply craft (non-aggressive, avoid combat)
+	* Added new music and sound effects
+	* Added debris effect when fighters are destroyed
+	* Added keyboard alternatives to some mouse controls
+	* Added icons to HUD system, to help identify abilities and meters
+	* Misc. AI, mission, and bug fixes
+
+0.4
+	
+	* Added mouse + keyboard controls (replaces keyboard-only method)
+	* Added new craft: Kingfisher, Mantis, Rook, Hammerhead, Khepri, Scarab, Thunderhead.
+	* Added laser cannon - highly effective against shields
+	* Tweaks to AI system, to make the game easier, use laser cannons, and updates for Shuttles and Tugs
+	* Added several new missions
+	* Added rockets - straight-firing missiles, that don't home in. Bombers (Hammerhead, Khepri, and Scarab) have unlimited rockets
+	* New AI flags to tell craft to avoid combat all together, or to mostly avoid it.
+	* Messages boxes are now shown during missions, to give the player more information
+	* All craft have had their armour and shield ratings doubled, to make battles last longer
+	* Added remote rocket turrets
+	* Added ECM training mission
+	* Added Windows makefile
+	* Added Linux and Windows binary build scripts
+
+0.3
+
+	* Added a few new missions.
+	* Added new stats.
+	* Flash health and shield bars when under 25%.
+	* Show warning message and play sound when a missile is launched, targetting the player.
+	* Added Boost and ECM abilities for player.
+	* Fixed a bug which messed up the config file saving.
+	* Added civilian rescue missions.
+	* New craft: Tug and Shuttle.
+	* Toned down the AI a bit, to make the battle less difficult and frantic.
+	* Now showing mission data on the right-hand side of the screen, in place of the target armour and shield.
+
+0.2
+
+	* Added Firefly, Nymph, Hyena, and Leopard fighters.
+	* Added Clarke and Iliad missions.
+	* Added Epic Missions - large skirmishes, with the ability for the player to swap fighter when their current one is destroyed.
+	* Allowed enemies to fire missiles.
+	* Allowed enemies to flee (if flagged to do so).
+	* Added mission triggers, to allow for events to take place (e.g. add a enemy squadron after 1 minute).
+	* Tweaking speeds of fighters - were too fast.
+	* Added Waypoints.
+	* Added ability to set mission availability dependencies.
+	* Improved stats processing. Added pages to stats screen.
+	* Player can now swap weapons (if fighter allows).
+	* Replaced missile bar with weapon info on HUD.
+	* Added objective target types, and conditional objectives.
+	* Added mag cannons and Ray.
+
+0.1
+
+	* Added initial missions, galactic map, and title screen. Game is playable in a most basic fashion, and a handful of missions are available. Loading and saving is supported (with -DUNIX, these will go to ~/.local/share/tbftss).

@@ -1,0 +1,40 @@
+{
+	"name" : "Rook",
+	"description" : "The most heavily armed and boosting the greatest defences of all the starfighters in the CSN, the Rook generally only sees action during significant missions and operations, where its increased power can bring many benefits. It is, however, the slowest of all the CSN's starfighters and some pilots have complained that it feels very sluggish in combat.",
+	"affiliation" : "CSN",
+	"health" : 110,
+	"shield" : 80,
+	"speed" : 1.7,
+	"reloadTime" : 12,
+	"shieldRechargeRate" : 45,
+	"texture" : "gfx/fighters/rook.png",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : 0,
+			"y" : 0
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : -9,
+			"y" : 0
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 9,
+			"y" : 0
+		},
+		{
+			"type" : "BT_LASER",
+			"x" : -5,
+			"y" : 0
+		},
+		{
+			"type" : "BT_LASER",
+			"x" : 5,
+			"y" : 0
+		}
+	],
+	"missiles" : 4,
+	"flags" : "EF_TAKES_DAMAGE+EF_COMMON_FIGHTER"
+}

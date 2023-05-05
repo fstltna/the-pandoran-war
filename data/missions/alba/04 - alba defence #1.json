@@ -1,0 +1,162 @@
+{
+	"name" : "Alba Defence #1",
+	"description" : "A number of key Independent systems have come under simultaneous attack by Tzac forces. We need to drive them away, so that we can continue to focus on the more pressing threat of the Pandoran army. At this time, it is vital that we prevent Christabel from making any significant gains by amassing her forces in these locations.",
+	"requires" : 35,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/torelli.png",
+	"music" : "music/battle/battleThemeA.mp3",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Check all Waypoints",
+			"targetName" : "Waypoint",
+			"targetValue" : 3,
+			"targetType" : "TT_WAYPOINT"
+		},
+		{
+			"description" : "Defeat Tzac group #1",
+			"targetName" : "Rebels-1",
+			"targetValue" : 4,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		},
+		{
+			"description" : "Defeat Tzac group #2",
+			"targetName" : "Rebels-2",
+			"targetValue" : 5,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		},
+		{
+			"description" : "Defeat Tzac group #3",
+			"targetName" : "Rebels-3",
+			"targetValue" : 6,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		}
+	],
+	"player" : {
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "1st Lt. Curtis Rice",
+		"squadron" : "Eightballers"
+	},
+	"fighters" : [
+		{
+			"types" : "Firefly;Nymph",
+			"number" : 6,
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 500
+		},
+		{
+			"groupName" : "Rebels-1",
+			"types" : "Shale",
+			"number" : 4,
+			"side" : "SIDE_TZAC",
+			"x" : 25,
+			"y" : 8,
+			"scatter" : 500,
+			"active" : 0
+		},
+		{
+			"groupName" : "Rebels-2",
+			"types" : "Shale",
+			"number" : 5,
+			"side" : "SIDE_TZAC",
+			"x" : 28,
+			"y" : 37,
+			"scatter" : 500,
+			"active" : 0
+		},
+		{
+			"groupName" : "Rebels-3",
+			"types" : "Shale",
+			"number" : 6,
+			"side" : "SIDE_TZAC",
+			"x" : 12,
+			"y" : 25,
+			"scatter" : 500,
+			"active" : 0
+		}
+	],
+	"entities" : [
+		{
+			"type" : "ET_WAYPOINT",
+			"x" : 25,
+			"y" : 18
+		},
+		{
+			"type" : "ET_WAYPOINT",
+			"x" : 28,
+			"y" : 27
+		},
+		{
+			"type" : "ET_WAYPOINT",
+			"x" : 22,
+			"y" : 25
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"ACTIVATE_NEXT_WAYPOINT",
+				"MSG_BOX Rice;Three Tzac fighter groups has been sighted in the area. We need to hunt them down and eliminate them."
+			]
+		},
+		{
+			"function" : "Waypoint #1",
+			"lines" : [
+				"ACTIVATE_ENTITY_GROUPS Rebels-1",
+				"ACTIVATE_OBJECTIVES Defeat Tzac group #1",
+				"MSG_BOX Wingmate;Enemies sighted.",
+				"MSG_BOX Rice;Break and attack, people!"
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 4",
+			"lines" : [
+				"MSG_BOX Rice;That's the first group handled. Let's get to the next waypoint.",
+				"ACTIVATE_NEXT_WAYPOINT"
+			]
+		},
+		{
+			"function" : "Waypoint #2",
+			"lines" : [
+				"ACTIVATE_ENTITY_GROUPS Rebels-2",
+				"ACTIVATE_OBJECTIVES Defeat Tzac group #2",
+				"MSG_BOX Rice;Second group located."
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 9",
+			"lines" : [
+				"MSG_BOX Rice;Control, this is Rice. Nine enemy fighters downed. Moving to the final waypoint.",
+				"ACTIVATE_NEXT_WAYPOINT"
+			]
+		},
+		{
+			"function" : "Waypoint #3",
+			"lines" : [
+				"ACTIVATE_ENTITY_GROUPS Rebels-3",
+				"ACTIVATE_OBJECTIVES Defeat Tzac group #3",
+				"MSG_BOX Rice;Final group spotted."
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 15",
+			"lines" : [
+				"WAIT 2",
+				"MSG_BOX Rice;That's all of them.",
+				"MSG_BOX Wingmate;Not as tough as I was expecting.",
+				"MSG_BOX Rice;I think they're testing the water, like our Pandoran friends before them.",
+				"MSG_BOX Rice;We'd better prepare ourselves for a major attack in the next few days. Hopefully not from both of them at once.",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}
+ 

@@ -1,0 +1,25 @@
+{
+	"name" : "Nymph",
+	"description" : "A light class starfighter, constructed for use by the United Naval Forces. With the exception of the ATAFs, one of the latest designed and constructed starfighters in recent years.",
+	"affiliation" : "UNF",
+	"health" : 45,
+	"shield" : 40,
+	"speed" : 2,
+	"reloadTime" : 14,
+	"shieldRechargeRate" : 30,
+	"texture" : "gfx/fighters/nymph.png",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : -12,
+			"y" : -2
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 12,
+			"y" : -2
+		}
+	],
+	"missiles" : 3,
+	"flags" : "EF_TAKES_DAMAGE+EF_COMMON_FIGHTER"
+}

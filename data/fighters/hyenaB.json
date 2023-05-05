@@ -1,0 +1,35 @@
+{
+	"name" : "Hyena-B",
+	"description" : "The Hyena is a new starfighter, introduced in the last 15 years and was constructed specifically for use by the United Naval Forces. Like most other medium-class starfighters, it treads the line between light and heavy-classes, offering high speeds and manoeuvrability, dense armour and shielding, and presenting high offensive capabilities. The Hyena is typically identified as Hyena-A or Hyena-B, depending on whether it is equipped with mag cannons or laser cannons.",
+	"affiliation" : "UNF",
+	"health" : 90,
+	"shield" : 45,
+	"speed" : 1.85,
+	"reloadTime" : 15,
+	"shieldRechargeRate" : 40,
+	"texture" : "gfx/fighters/hyena.png",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : -12,
+			"y" : -12
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 12,
+			"y" : -12
+		},
+		{
+			"type" : "BT_LASER",
+			"x" : -8,
+			"y" : -12
+		},
+		{
+			"type" : "BT_LASER",
+			"x" : 8,
+			"y" : -12
+		}
+	],
+	"missiles" : 4,
+	"flags" : "EF_TAKES_DAMAGE+EF_COMMON_FIGHTER"
+}

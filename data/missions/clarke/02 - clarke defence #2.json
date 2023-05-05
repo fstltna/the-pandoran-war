@@ -1,0 +1,96 @@
+{
+	"name" : "Clarke Defence #2",
+	"description" : "We have successfully punched our way through several squadrons of Pandoran fighters, but their capital ships are fast approaching Dublin. Your objective is to take down INF Dirk. Ensure the Lynx-class bombers can get in close enough to delivery a strike.",
+	"requires" : 12,
+	"background" : "gfx/backgrounds/background06.jpg",
+	"planet" : "gfx/planets/lewis.png",
+	"music" : "music/battle/heroism.ogg",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Destroy INF Dirk",
+			"targetName" : "INF Dirk",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Eliminate escorts",
+			"targetName" : "Pandoran",
+			"targetValue" : 6,
+			"targetType" : "TT_DESTROY"
+		}
+	],
+	"player" : {
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "1st Lt. Angus Carlyle",
+		"squadron" : "Sentinels",
+		"x" : 45,
+		"y" : 45
+	},
+	"fighters" : [
+		{
+			"types" : "Firefly;Nymph;Leopard;Hyena-A;Hyena-B",
+			"side" : "SIDE_ALLIES",
+			"x" : 45,
+			"y" : 45,
+			"number" : 10,
+			"scatter" : 500
+		},
+		{
+			"types" : "Lynx",
+			"side" : "SIDE_ALLIES",
+			"x" : 45,
+			"y" : 45,
+			"number" : 2,
+			"scatter" : 500
+		},
+		{
+			"groupName" : "Pandoran",
+			"types" : "Jackal;Sphinx;Mantis",
+			"side" : "SIDE_PANDORAN",
+			"x" : 20,
+			"y" : 40,
+			"number" : 6,
+			"scatter" : 0,
+			"aiFlags" : "+AIF_MOVES_TO_LEADER"
+		}
+	],
+	"capitalShips" : [
+		{
+			"name" : "INF Dirk",
+			"types" : "INF Corvette 01",
+			"side" : "SIDE_PANDORAN",
+			"x" : 39,
+			"y" : 39,
+			"flags" : "+EF_AI_LEADER"
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Wingmate;Commander, I would recommend we take out the escorts first.",
+				"MSG_BOX Carlyle;Agreed. The Dirk on its own would already prove a challenge."
+			]
+		},
+		{
+			"function" : "Destroy INF Dirk",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Carlyle;INF Dirk has been downed."
+			]
+		},
+		{
+			"function" : "ALL_OBJECTIVES_COMPLETE",
+			"lines" : [
+				"WAIT 1",
+				"MSG_BOX Carlyle;This is Carlyle. Enemy corvette has been destroyed. All other fighters scratched.",
+				"MSG_BOX Control;That's good work, Commander. We're preparing to engage more enemies, so we can't put our feet up just yet.",
+				"MSG_BOX Carlyle;Hell. Okay, we'll return momentarily. Carlyle out.",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}

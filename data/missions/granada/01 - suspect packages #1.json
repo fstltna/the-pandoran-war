@@ -1,0 +1,55 @@
+{
+	"name" : "Suspect Packages #1",
+	"description" : "A patrol group has sighted a number of crates drifting near to Alexandria. The contents of the crates is currently unknown, but they have been confirmed to be belong to the CSN. A shuttle has been dispatched to retrieve them, in case they should wander in to any shipping lanes. Once we have them in our possession, we will work to determine how they came to be here.",
+	"requires" : 3,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/alexandria.png",
+	"music" : "music/battle/determination.mp3",
+	"objectives" : [
+		{
+			"description" : "Retrieve all packages",
+			"targetName" : "package",
+			"targetValue" : 6,
+			"targetType" : "TT_ITEM"
+		}
+	],
+	"player" : {
+		"pilot" : "Lt. Cdr. Daniel Carr",
+		"squadron" : "Iron Patriots",
+		"type" : "TAF",
+		"side" : "SIDE_ALLIES"
+	},
+	"fighters" : [
+		{
+			"types" : "TAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25.1,
+			"y" : 25
+		},
+		{
+			"types" : "Shuttle",
+			"side" : "SIDE_ALLIES",
+			"x" : 24.9,
+			"y" : 25
+		}
+	],
+	"items" : [
+		{
+			"name" : "package",
+			"number" : 6,
+			"type" : "smallCrate",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 5000,
+			"flags" : "+EF_MISSION_TARGET"
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Wingmate;Not expecting any company, Carr, so this should just be a routine pickup. We'll keep an eye out, though."
+			]
+		}
+	]
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<style>
+body {background-color:#000; color: #fff; font-family: "sans"; background-image: url("background02.jpg");}
+h3 {background-color:#47c; padding:0.25em; color:#fff; margin-top:3em; border: 1px solid #fff;}
+h4 {background-color:#000; padding:0.25em; color:#fff; margin-top:3em; border: 1px solid #5ad;}
+h5 {border-bottom: 1px solid #5ad; width: 50%;}
+a {color: #0af; text-decoration: none;}
+a:hover {color: #0af; text-decoration: underline;}
+table.controls {border:1px solid #fff; padding: 0.5em; width:40em;}
+table.controls td:first-child {width: 50%; color:#8cf;}
+table.controls td:nth-child(2) {font-weight: bold;}
+img.screenshot {border: 1px #fff solid; padding: 1px; width:800px; background-color:#000; display: block; margin: 0 auto;}
+div.content {width: 75%; display: block; margin-left: auto; margin-right: auto; border:1px #888 solid; padding:10px;}
+div.annotation {font-size: 12px; position:absolute; background-color:#08f; color:#fff; padding:3px; font-weight:bold; border:2px #fff solid; border-radius: 5px; text-align:center}
+div.annotationContainer {position:relative; width:800px; display: block; margin-left: auto; margin-right: auto;}
+span.highlight {font-weight:bold; color: #0bf;}
+span.code {font-family: monospace; color: #0f0;}
+</style>
+<title>TBFTSS - The Pandoran War</title>
+</head>
+<body>
+
+<div class="content">
+
+<div style="text-align:center">
+<p><img src="logo.png"></p>
+<p><img src="pandoran.png"></p>
+<p>Last updated: 12th August 2017</p>
+</div>
+
+<div>
+<p style="font-size: 14pt">
+Table of Contents
+<ul id="toc">
+</ul>
+</p>
+</div>
+
+<h3 class="section">Introduction</h3>
+<p>
+The Battle for the Solar System - The Pandoran War is a 2D space shooter, based on the space opera novels by <a href="http://www.twitter.com/stephenjsweeney">Stephen J Sweeney</a>. This game is set during the seven year period between <a href="http://www.battleforthesolarsystem.com/books/thirdside/">THE THIRD SIDE</a> and <a href="http://www.battleforthesolarsystem.com/books/attribute/">THE ATTRIBUTE OF THE STRONG</a>, the second and third novels in the trilogy, respectively.
+</p>
+<p>
+This manual can also be found online at <a href="http://www.battleforthesolarsystem.com/games/pw/manual/index.html">www.battleforthesolarsystem.com/games/pw/manual/index.html</a>.
+</p>
+<p>You can support development of this game by purchasing one of the books in the trilogy: <a href="http://www.battleforthesolarsystem.com/purchase/">www.battleforthesolarsystem.com/purchase/</a>
+</p>
+
+<h3>Getting started</h3>
+<p>
+Before plunging in to the game proper and tackling the missions, it is recommended that you take time to become comfortable with the game mechanics. Upon starting a new game, you will be presented with the galactic map, with <span class="highlight">Sol</span> being the selected star system. New players should take their time to work through the missions here, to ease themselves in to the game. Here, you engage in a free flight, to get used to the controls, face off against unarmed and weak opponents, and get to grips with the objective system.
+</p>
+<p>
+Note that the primary control scheme for the game is mouse and keyboard. It is not recommended you attempt to play this game using a trackpad.
+</p>
+
+<h3>Title Screen</h3>
+<p>
+This is the first screen that you will see upon starting the game. You may select from the following options:
+<ul>
+<li><span class="highlight">Campaign</span> - Start or continue the current campaign.</li>
+<li><span class="highlight">Challenges</span> - Go to the challenges section.</li>
+<li><span class="highlight">Trophies</span> - View trophies that have been earned. See the Trophies section for more information.</li>
+<li><span class="highlight">Stats</span> - View various game statistics.</li>
+<li><span class="highlight">Options</span> - Configure various configuration option. See the options section for more information.</li>
+<li><span class="highlight">Credits</span> - View the production credits for the game.</li>
+<li><span class="highlight">Quit</span> - Exit the game</li>
+</ul>
+</p>
+<img src="title.png" class="screenshot">
+
+<h3>Campaign</h3>
+<p>
+The campaign is the story mode of the game. In this mode, you will progress through various missions, unlocking others as you game. Missions will take place in a number of different star systems, using a number of different starfighters. Progress is fairly non-linear, allowing the player to chose the order in which they will tackle the available missions. On occassion, mostly for story purposes, the game will require all current missions to be completed before more will become available. See below for more details.
+</p>
+
+<h4>Galactic Map</h4>
+<p>
+This is the main mission select screen. Here, you can move around and select star systems in which to undertake missions. Star Systems that have missions will emit red circles at regular intervals. Red arrows will also point in the direction of star systems that have missions, but are currently offscreen.
+</p>
+<p>
+You can scroll around the galactic map by holding down the left mouse button and dragging the mouse (click and drag). To access missions, simply click on a star system that is emitting red pulses.
+</p>
+
+<p>&nbsp;</p>
+
+<div class='annotationContainer'>
+	<div class="annotation" style="left:65px; top:65px;">1</div>
+	<div class="annotation" style="left:400px; top:35px;">2</div>
+	<div class="annotation" style="left:225px; top:125px;">3</div>
+	<div class="annotation" style="left:550px; top:135px;">4</div>
+	<div class="annotation" style="left:430px; top:235px;">5</div>
+</div>
+<img src="galaxy.png" class="screenshot">
+<ol>
+	<li>Mission indicator arrow - points in the direction of star systems with missions that are currently off screen.</li>
+	<li>Number of completed and total missions.</li>
+	<li>A star system:
+	<ol>
+		<li><span style="color:#8cf; font-weight:bold;">Blue</span>: CSN star system.</li>
+		<li><span style="font-weight:bold;">White</span>: Independent star system.</li>
+		<li><span style="color:#f00; font-weight:bold;">Red</span>: Pandoran-occupied star system.</li>
+	</ol>
+	</li>
+	<li>A star system with missions available.</li>
+	<li>Mouse cursor.</li>
+</ol>
+
+<h5>Controls</h5>
+<table class="controls">
+<tr><td>Mouse cursor</td><td>Scroll galactic map</td></tr>
+<tr><td>Left mouse button</td><td>Select highlighted star system</td></tr>
+<tr><td>Escape</td><td>Menu</td></tr>
+</table>
+
+<h4>Star Systems</h4>
+<p>
+The Star System view shows a list of missions available for that star system. In many cases, missions are unlocked as the related or previous missions are completed. The right-hand side of the star system view displays an overview of the mission, including the class of craft the player will be piloting, and the name of the pilot (if applicable), and the squadron to which they belong. To play a mission, highlight it, and then click on <span class="highlight">Start Mission</span>.
+</p>
+
+<p>&nbsp;</p>
+
+<div class='annotationContainer'>
+	<div class="annotation" style="left:465px; top:55px;">1</div>
+	<div class="annotation" style="left:240px; top:105px;">2</div>
+	<div class="annotation" style="left:195px; top:355px;">3</div>
+	<div class="annotation" style="left:530px; top:235px;">4</div>
+</div>
+<img src="starSystem.png" class="screenshot">
+<ol>
+	<li>Star system name.</li>
+	<li>
+		Available mission list.
+		<ol><span style="color:#ff0; font-weight:bold;">Yellow</span>: missions not completed.</ol>
+		<ol><span style="font-weight:bold;">White</span>: missions completed.</ol>
+	</li>
+	<li>Start Mission button.</li>
+	<li>Mission detail.</li>
+</ol>
+
+<h5>Controls</h5>
+<table class="controls">
+<tr><td>Left mouse button</td><td>Select mission / start mission</td></tr>
+<tr><td>Escape</td><td>Return to galactic map</td></tr>
+</table>
+
+<h4>Missions</h4>
+<p>
+Each mission has various objectives that the player must finish in order to complete the mission successfully. The mission ends when the player either successfully completes all the objectives, or is killed (and is not in an Epic mission). Note: there is no friendly fire between those on the same side (in other words, you need not worry about firing upon your team mates, or them hitting you - no damage will be taken).
+</p>
+
+<p>
+Mission objectives can be viewed at any time during play by pressing Tab. Objectives will need not be completed in order. It is also possible for an objective (and subsequently the entire mission) to be failed if they are not met: for example, failing to prevent the escape of a target, or the destruction of a vessel the player was charged with protecting.
+</p>
+
+<p>
+The player controls their craft by using the mouse. The fighter will orientate itself in the direction of the mouse cursor. Pressing the right mouse button will cause the craft to accelerate in the direction it is facing. Note that it is possible to turn and face a direction, while retaining the present course. As such, the player is able to strafe. To brake, press <span class="highlight">[S]</span> on the keyboard.
+</p>
+
+<p>
+To fire the craft's guns (should it be equipped with some), press the left mouse button. The craft will fire in the direction of the mouse pointer. Missiles can be fired by pressing the middle button of the mouse. Unlike standard guns, missiles are limited, and also require a target to be fired at (see Combat for more information).
+</p>
+
+<p>
+From time to time, message boxes will appear. These will carry important communication messages, progress updates, and chatter from your fellow pilots, regarding recent events. They're all worth paying attention to.
+</p>
+
+<p>&nbsp;</p>
+
+<div class='annotationContainer'>
+	<div class="annotation" style="left:430px; top:245px;">1</div>
+	<div class="annotation" style="left:350px; top:175px;">2</div>
+	<div class="annotation" style="left:185px; top:10px;">3</div>
+	<div class="annotation" style="left:25px; top:70px;">4</div>
+	<div class="annotation" style="left:125px; top:70px;">5</div>
+	<div class="annotation" style="left:500px; top:95px;">6</div>
+</div>
+<img src="mission1.png" class="screenshot">
+<ol>
+	<li>Player craft.</li>
+	<li>Mouse pointer.</li>
+	<li>
+	Player attributes:
+		<ol><span style="color:#0f0; font-weight:bold;">Green</span>: Armour</ol>
+		<ol><span style="color:#8cf; font-weight:bold;">Blue</span>: Shield</ol>
+		<ol><span style="color:#f0f; font-weight:bold;">Purple</span>: Boost</ol>
+		<ol><span style="color:#fa0; font-weight:bold;">Orange</span>: ECM</ol>
+	</li>
+	<li>Selected weapon.</li>
+	<li>Number of missiles.</li>
+	<li>Message box.</li>
+</ol>
+
+<h5>Controls</h5>
+<table class="controls">
+<tr><td>Mouse cursor</td><td>Orientate craft</td></tr>
+<tr><td>Right mouse</td><td>Accelerate</td></tr>
+<tr><td>S</td><td>Brake</td></tr>
+<tr><td>Tab</td><td>Display objectives</td></tr>
+<tr><td>Escape</td><td>Menu</td></tr>
+</table>
+<p style="font-size:10pt; font-style:italic">(note: some controls can be changed in the options screen)</p>
+
+<h3>Combat</h3>
+
+<p>
+It is rare for missions not to involve any combat. The player will automatically lock on to the closest enemy to them, switching to a new target if the current one is destroyed. The player can also press <span class="highlight">[A]</span> to cycle targets.
+</p>
+
+<p>
+A red box will appear around the current target, and an arrow around the player's craft will point in the target's direction. The name of the target and its distance from the player will also be displayed in the upper right of the screen. Targets can be destroyed by shooting them with your guns, or by firing missiles at them.
+</p>
+
+<h4>Shields</h4>
+
+<p>
+Most fighters, including the player's, are equipped with an energy shield. Unlike armour, this shield will recharge over time, and must be depleted entirely before the armour takes damage. Be aware that shields are extremely vulnerable to lasers. If a shield is hit by a laser blast and is depleted completely, it won't begin to recharge for 10 seconds, leaving the craft unable to rely on them for added protection.
+</p>
+
+<h4>Missiles</h4>
+
+<p>
+Missiles are fast, and chase after their targets for quite some time, finally causing a tremendous amount of damage on impact. A missile can only be fired if the player has missiles remaining, and the target is within range. When their route is clear, missiles rarely fail to hit their target, which can be very troublesome for the player if one is loosed against them. The player can instantly destroy any incoming missiles by using their <span class="highlight">ECM</span> (activated by pressing <span class="highlight">[D]</span>). The ECM must recharge whenever it is used (a duration lasting several seconds), and therefore should only be used when it is needed.
+</p>
+
+<h4>Boost</h4>
+
+<p>
+Unlike the AI craft in the game, the player has the ability to Boost (unrestricted by craft type). Boosting provides a temporary sudden burst of speed, lasting less than one second. It is highly useful for escaping dangerous situations, and, on occassion, outrunning a missile for long enough to allow the ECM to recharge. Once used, the Boost must spend several seconds recharging. Boost is activated by pressing <span class="highlight">[W]</span>.
+</p>
+
+<h4>Radar</h4>
+
+<p>
+The radar displays a number of coloured blips, with the player in the center. There are three levels of zoom available. The radar zoom can be cycled by pushing up on the mouse wheel.
+</p>
+
+<p>&nbsp;</p>
+
+<div class='annotationContainer'>
+	<div class="annotation" style="left:400px; top:185px;">1</div>
+	<div class="annotation" style="left:175px; top:360px;">2</div>
+	<div class="annotation" style="left:775px; top:50px;">3</div>
+	<div class="annotation" style="left:15px; top:395px;">4</div>
+	<div class="annotation" style="left:705px; top:355px;">5</div>
+	<div class="annotation" style="left:660px; top:425px;">6</div>
+	<div class="annotation" style="left:290px; top:5px;">7</div>
+	<div class="annotation" style="left:430px; top:5px;">8</div>
+	<div class="annotation" style="left:570px; top:5px;">9</div>
+</div>
+<img src="mission2.png" class="screenshot">
+<ol>
+	<li>Player target indicator:</li>
+	<li>Player target:</li>
+	<li>Target detail:</li>
+	<li>Battle messages</li>
+	<li>Radar:</li>
+		<ol><span style="color:#0f0; font-weight:bold;">Green</span>: friendly unit.</ol>
+		<ol><span style="color:#ff0; font-weight:bold;">Yellow</span>: current target.</ol>
+		<ol><span style="color:#f00; font-weight:bold;">Red</span>: enemy unit.</ol>
+		<ol><span style="font-weight:bold;">White</span>: mission target.</ol>
+	<li>Radar zoom amount.</li>
+	<li>Number of allied craft.</li>
+	<li>Number of complete / total objectives.</li>
+	<li>Number of opposing craft.</li>
+</ol>
+
+<h4>Controls</h4>
+<table class="controls">
+<tr><td>Left mouse</td><td>Fire primary guns</td></tr>
+<tr><td>Mouse wheel down</td><td>Switch main cannons</td></tr>
+<tr><td>Middle mouse up</td><td>Cycle radar zoom</td></tr>
+<tr><td>W</td><td>Boost</td></tr>
+<tr><td>A</td><td>Cycle targets</td></tr>
+<tr><td>D</td><td>ECM</td></tr>
+</table>
+<p style="font-size:10pt; font-style:italic">(note: some controls can be changed in the options screen)</p>
+
+<h4>Weaponry</h4>
+<p>
+Most craft are equipped with offensive weaponry, with some fighters featuring more than one type of gun.
+<ul>
+<li><span class="highlight">Plasma</span>: a standard offensive weapon, that deals heavy levels of damage to shields and armour.</li>
+<li><span class="highlight">Particle</span>: a low-power weapon that deal small amounts of damage to shields and armour. Favoured mostly be pirates and insurgents.</li>
+<li><span class="highlight">Mag</span>: delivers an electro-magnetic charge to the target, draining its system power and rendering it helpless. Can be used to disable vessels.</li>
+<li><span class="highlight">Missile</span>: homes in on target vessels, to deliver tremendous amounts of damage.</li>
+</ul>
+</p>
+
+<h3>Types of Mission</h3>
+<p>
+As a 2D shooter, many missions will involve the player needing to gun down enemy craft. However, some missions will also have additional objectives and requirements that must be fulfilled in order for them to be completed. Missions may also come with certain conditions, that, if failed, cause the mission to be failed immediately. Some of the more common types of mission and objectives are described below.
+</p>
+
+<h4>Patrol Missions</h4>
+<p>
+These missions involve the player needing to visit a set number of waypoints. The waypoint is activated when the player passes over it. Any surviving team mates will also need to be nearby in order for the waypoint to be considered reached.
+</p>
+
+<h4>Capture Missions</h4>
+<p>
+For these missions, the player (or a possible team mate) will need to disable the target craft, using Mag cannons. Such a mission would usually come with the added condition that the targets are not destroyed (a mission failure would result immediately).
+</p>
+
+<h4>Escort Missions</h4>
+<p>
+Escort missions involve overseeing the safe journey of a craft from one point to another. The craft in question could be civilian ships, a tug, or a shuttle. A mission failure would immediately follow the destruction of the asset. In most cases, the player will be responsible for taking the targets to the Extraction point.
+</p>
+
+<h4>Rescue Missions</h4>
+<p>
+Rescue missions involve ensuring that a stranded or disabled craft is safely transported to an extraction point. The player may or may not be charged with controlling the tug responsible for the task. See the section on Tugs for more information.
+</p>
+
+<h4>Epic Missions</h4>
+<p>
+Epic Missions are special types of mission. Typically, if the player's craft is destroyed during play, the mission will be failed. However, in Epic Missions the player will be given the chance to select a new craft to pilot upon the destruction of their current one. In many cases, the number of times the player can switch pilots will be limited. This will continue until no more craft are available to the player, or the player runs out of available pilots, which ever comes first. Epic Missions are also characterised by the number of active participants. There may be dozens of craft battling at once, victory going to the side to eliminates all their opponents. Note that even though there may be over 100 craft available to each side, only a certain number of these (for example, 32) will be present in the battle. Other craft will arrive as each side takes losses, to shore up the numbers. Some Epic Missions will also require the player to destroy a certain number of opponents before the end of the engagement.
+</p>
+
+<h3>Challenges</h3>
+
+<p>
+Challenges are a special game mode which allow you to undertake missions with particular goals that need to be met. These missions enforce restrictions such as time limits, the use of missiles, and the need to fulfill certain other criteria in order to fully complete the objectives. New challenge missions are unlocked when at least one goal from the previous challenge has been successfully met.
+</p>
+<p>
+To start challenge mission, click on the numbered mission box and then click on Start Challenge Mission. If the mission is locked, you will not be able to play it until you have completed a challenge from the previous mission.
+</p>
+
+<p>&nbsp;</p>
+
+<div class='annotationContainer'>
+	<div class="annotation" style="left:330px; top:45px;">1</div>
+	<div class="annotation" style="left:480px; top:65px;">2</div>
+	<div class="annotation" style="left:130px; top:100px;">3</div>
+	<div class="annotation" style="left:105px; top:185px;">4</div>
+	<div class="annotation" style="left:205px; top:185px;">5</div>
+	<div class="annotation" style="left:250px; top:340px;">6</div>
+	<div class="annotation" style="left:650px; top:340px;">7</div>
+</div>
+<img src="challenges.png" class="screenshot">
+<ol>
+	<li>Total challenges completed / outstanding</li>
+	<li>Page number</li>
+	<li>Challenge mission box</li>
+	<li>Number of challenges completed / available for this mission</li>
+	<li>Indciates this challenge mission is not yet available</li>
+	<li>Challenge mission detail</li>
+	<li>Challenge objectives</li>
+</ol>
+</p>
+
+<h3>Trophies</h3>
+<p>
+The Pandoran War offers an optional achievement award system (like those found on PSN, Xbox Live, and Steam), in the form of trophies. Trophies are earned through various gameplay actions, such as completing missions, defeating enemies, and racking up stats. Earned and available trophies can be viewed in the menu from the title screen, the galactic map, and the challenges menu. A notification will be shown when a trophy is unlocked, sliding in from the left-hand side of the screen. So as not to interupt the game, potentially spoiling a hard-fought mission, notifications are only shown at certain points during the game.
+</p>
+
+<div class='annotationContainer'>
+	<div class="annotation" style="left:330px; top:45px;">1</div>
+	<div class="annotation" style="left:480px; top:65px;">2</div>
+	<div class="annotation" style="left:300px; top:200px;">3</div>
+	<div class="annotation" style="left:400px; top:270px;">4</div>
+	<div class="annotation" style="left:450px; top:350px;">5</div>
+</div>
+<img src="trophies.png" class="screenshot">
+<ol>
+	<li>Earned / Total trophies</li>
+	<li>Page number</li>
+	<li>Challenge mission box</li>
+	<li>A hidden trophy. Will be revealed once requirements are met</li>
+	<li>An earned trophy (note the trophy is coloured)</li>
+	<li>An unearned trophy (note that it is greyed out)</li>
+</ol>
+<p>
+<p style="font-size:10pt; font-style:italic">(note: this is not an online system, and is local to the machine on which the game is saved.)</p>
+</p>
+
+<h3>Misc. gameplay details</h3>
+
+<h4>Shuttles</h4>
+<p>
+Shuttles are unarmed craft that are used to pick up objects found floating around the battle area. Only shuttles have the ability to do this, and some missions will require the player to escort a shuttle to a collection point and back. Being unarmed, they require protection, but will seek to avoid combat and flee on sight of enemy craft. The shuttle may be either player or AI controlled.
+</p>
+
+<h4>Tugs</h4>
+<p>
+Tugs are craft that are used to tow stranded or disabled vessels. A tow cable can be attached to the target craft by flying near to it. Note that only one craft can be towed at any one time, and that the tow cable cannot be manually detached. Tugs are very weak craft, having no shields, and only a rapid fire particle cannon for protection. The tug may be either player or AI controlled.
+</p>
+
+<h4>Capital Ships</h4>
+<p>
+Captial ships are large, heavily armed craft that are sometimes encountered during missions. They are slower moving than fighters and most other vessels, but are far harder to take down. Capital ships are made up of several different parts: components, guns, and engines. A capital ship can only be destroyed when all of its components are destroyed. Destroying the engines will cause the ship to stop (which at times may help, if it is moving towards a target you are attempting to protect), while targeting the guns will stop it from firing. However, attempting to take on a capital ship single-handed is usually a very bad idea, as, unless you are piloting an ATAF, you will find yourself heavily out-gunned.
+</p>
+<img src="capitalShips.png" class="screenshot">
+
+<h4>Defeat by the Pandorans</h4>
+<p>
+During the course of the campaign, you may encounter a message on the galactic map saying that a star system has fallen to the Pandorans. This is all part of the story flow, and there is nothing that the player can do to alter this outcome. Additionally, you may from time to time play a mission (usually an Epic) that is unwinnable. Upon the death of the player (and with the relevant mission objectives having been completed) the mission will automatically end, and return to the galactic map (without it being marked as Failed). This, again, is all part of the campaign flow.
+</p>
+
+<h3>Options</h3>
+<p>
+Various game options can be changed:
+<ul>
+<li><span class="highlight">Window Size</span> - change the size of the window the game is played in. Note that the game interally renders a resolution of 1280x720, and any changes to the window size will result in the game being scaled up or down.<sup>[1]</sup></li>
+<li><span class="highlight">Sound Volume</span> - Change the volume of the sounds effects in the game, from 0 (no sound) to 10 (loudest).</li>
+<li><span class="highlight">Music Volume</span> - Change the volume of the music in the game, from 0 (no sound) to 10 (loudest).</li>
+<li><span class="highlight">Fullscreen</span> - Whether or not to start the game in fullscreen mode.<sup>[1]</sup></li>
+<li><span class="highlight">Control Configuration</span> - Allows you to configure the controls (see below for more details)</li>
+</ul>
+<p>A command line switch also exists to allow a user to specify an arbitary screen size. This can be done with:</p>
+<p>
+<span class='code'>./tbftss -size &lt;w&gt;x&lt;h&gt;</span>
+</p>
+<p>
+Where <span class='code'>w</span> is the width of the window and <span class='code'>h</span> is the height.
+</p>
+<p>
+For example, running the game with <span class='code'>-size 800x600</span> will open a 800 x 600 window. Resolutions cannot be made smaller than 1280 x 720 or larger than 3840 x 2160.
+</p>
+<p style="font-size:8pt">[1] - changes to this option will take effect next time you start the game.</p>
+</p>
+
+<h4>Control Configuration</h4>
+<p>
+Most of the controls in the game can be tailored to the player's liking, using either the keyboard or the mouse.
+</p>
+<img src="controls.png" class="screenshot">
+<p>
+To change a control, click on the box and then press the key or mouse button you wish to use. To clear a control, press Backpress. To cancel updating a control, press escape (not that therefore neither Backspace nor Escape can be set as controls). Note that the same key or mouse button can be set for multiple controls. Keys are represented by their name, whereas mouse buttons are donated by "Btn X", where X is the number of the mouse button.
+</p>
+<p>
+Controls be can restored to their default settings by clicking the "Restore Defaults" button.
+</p>
+
+<h4>Gameplay settings</h4>
+<p>
+Some minor gameplay settings can be tweaked in the <b>config.json</b> save file:
+</p>
+<p>
+<ul>
+<li><span class="highlight">friendlyFire</span> - whether friendly fire between craft of the same side is allowed. 0, Off. 1 On. Default is 0 (off).<br>
+<li><span class="highlight">autoSwitchPlayerTarget</span> - whether the player's enemy targeter should automatically switch if the target goes out of a range. 0, Off. 1 On. Default is 1 (on).<br>
+<li><span class="highlight">missileReTarget</span> - whether missiles should select a new target if their current one is destroyed. Note that missiles will only make one attempt to do so, before automatically self-destructing. 0, Off, 1 On. Default is 0 (off).<br>
+<li><span class="highlight">healthBars</span> - whether or not to show health bars above fighters and other units, in game. 0, Off. 1 On. Default is 1 (on).<br>
+</ul>
+</p>
+<p>
+To alter a gameplay element, update the setting and restart the game. It is not recommended that you fiddle with these settings unless you are comfortable editing such files, as it could result in the loss of data or the game not working properly.
+</p>
+
+<h3>Fighter Database</h3>
+<p>
+The fighter database allows the player to view information about various starfighters in the game, including their armour, shield, and speed ratings, and how many of them have been destroyed by the player (where applicable).
+</p>
+<img src="fighterDB.png" class="screenshot">
+<p>
+Clicking on the left and right arrows will cycle back and forth through the fighters. All fighter information is available from the start of the game, with no unlocks or encounters required.
+</p>
+
+<h3>Misc. Information</h3>
+<p>
+The Pandoran War creates two save game files when run, config.json and game.save. Both files are human-readable and saved in JSON format. The files are stored in:
+</p>
+<ul>
+<li>Linux: $HOME/.local/share/tbftss</li>
+<li>Windows: $USERPROFILE/tbftss</li>
+</ul>
+<p>
+Note that as the source code for this game is freely available, these settings may have been changed.
+</p>
+<p>
+$HOME on Linux will be /home/&lt;userId&gt;, where userId is your login username. Typically on Windows, $USERPROFILE is C:/Users/&lt;userId&gt;, where userId is your Windows login.
+</p>
+
+<h3>License</h3>
+<p>
+Please refer to the LICENSE and README.md files that came with this game for information on the various copyrights of the source code, graphics, sound, and data. Additionally, you may visit <a href="https://github.com/stephenjsweeney/tbftss">https://github.com/stephenjsweeney/tbftss</a> to get the source code itself, and view the files there.
+</p>
+
+<h3>About</h3>
+<p>
+This game is based on the Battle for the Solar System novel trilogy by Stephen J Sweeney. You can learn more about the trilogy by visiting:
+</p>
+
+<p><a href="http://www.battleforthesolarsystem.com/">www.battleforthesolarsystem.com</a></p>
+
+<p>
+You can contact the author at:
+</p>
+
+<p><a href="mailto:stephenjsweeney@battleforthesolarsystem.com">stephenjsweeney@battleforthesolarsystem.com</a></p>
+
+<p style="font-size:8pt; font-style:italic">
+This is a work of fiction. Names, characters, businesses, places, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental. The Battle for the Solar System : The Pandoran War is &copy; 2015-2017, Stephen J Sweeney, All Rights Reserved. The Battle for the Solar System and all related materials (including, but not limited to, characters, setting, and story elements) are &copy; 2009-2017, Stephen J Sweeney, All Rights Reserved.
+</p>
+
+<script src='jquery-2.1.3.min.js'></script>
+
+<script>
+var toc = $('#toc');
+var i = 1;
+
+$('h3,h4').each(function(i, e) {
+
+	var link = 'link' + i;
+	var a = $('<a>').attr('href', '#' + link).append(e.innerText);
+
+	$(e).before($('<a>').attr('name', link));
+
+	if (e.tagName == 'H3')
+	{
+		toc.append("&blacksquare; <a href='#" + link + "'>" + e.innerText + "</a><br>");
+	}
+	
+	if (e.tagName == 'H4')
+	{
+		toc.append("<span style='text-indent: 2em; display: inline-block'>&#9643 <a href='#" + link + "'>" + e.innerText + "</a></span><br>");
+	}
+});
+
+</script>
+
+</div>
+
+</body>
+</html>

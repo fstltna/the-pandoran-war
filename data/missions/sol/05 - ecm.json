@@ -1,0 +1,38 @@
+{
+	"name" : "ECM Training",
+	"description" : "Practice using your ECM in the next encounter. The Dart here is equipped with missiles, which will home in on you. You can thwart these attacks by careful use of your ECM. Once you are done practicing, you can destroy the Dart and move on.",
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/earth.png",
+	"music" : "music/battle/Battle in the winter.mp3",
+	"objectives" : [
+		{
+			"description" : "Eliminate Dart",
+			"targetName" : "Dart",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY"
+		}
+	],
+	"player" : {
+		"type" : "TAF",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "2nd Lt. Jim Goddard",
+		"squadron" : "Midnight Runners"
+	},
+	"fighters" : [
+		{
+			"name" : "Dart",
+			"types" : "Missile Dart",
+			"side" : "SIDE_PIRATE",
+			"x" : 25,
+			"y" : 24
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Earth Orbital #1;Use your ECM to destroy the missiles fired at you. Remember, the ECM needs several seconds to recharge between uses."
+			]
+		}
+	]
+}

@@ -1,0 +1,72 @@
+[
+	{
+		"name" : "resume",
+		"group" : "galacticMap",
+		"type" : "WT_BUTTON",
+		"text" : "Resume",
+		"x" : -1,
+		"y" : 170,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "stats",
+		"group" : "galacticMap",
+		"type" : "WT_BUTTON",
+		"text" : "Stats",
+		"x" : -1,
+		"y" : 250,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "fighterDB",
+		"group" : "galacticMap",
+		"type" : "WT_BUTTON",
+		"text" : "Fighter Database",
+		"x" : -1,
+		"y" : 330,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "trophies",
+		"group" : "galacticMap",
+		"type" : "WT_BUTTON",
+		"text" : "Trophies",
+		"x" : -1,
+		"y" : 410,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "options",
+		"group" : "galacticMap",
+		"type" : "WT_BUTTON",
+		"text" : "Options",
+		"x" : -1,
+		"y" : 490,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "quit",
+		"group" : "galacticMap",
+		"type" : "WT_BUTTON",
+		"text" : "Return to Title",
+		"x" : -1,
+		"y" : 570,
+		"w" : 200,
+		"h": 34
+	},
+	{
+		"name" : "ok",
+		"group" : "fallen",
+		"type" : "WT_BUTTON",
+		"text" : "OK",
+		"x" : -1,
+		"y" : 400,
+		"w" : 200,
+		"h": 34
+	}
+]

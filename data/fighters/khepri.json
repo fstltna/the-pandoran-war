@@ -1,0 +1,36 @@
+{
+	"name" : "Khepri",
+	"description" : "The Khepri is a bomber, designed and built by the Kingdom of Tzac. It is an enchanced derivative of the Imperial Scarab.",
+	"affiliation" : "Tzac",
+	"health" : 60,
+	"shield" : 50,
+	"speed" : 1.7,
+	"reloadTime" : 35,
+	"shieldRechargeRate" : 60,
+	"texture" : "gfx/fighters/khepri.png",
+	"guns" : [
+		{
+			"type" : "BT_PLASMA",
+			"x" : -12,
+			"y" : 0
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 12,
+			"y" : 0
+		},
+		{
+			"type" : "BT_PLASMA",
+			"x" : 0,
+			"y" : 0
+		},
+		{
+			"type" : "BT_ROCKET",
+			"x" : 0,
+			"y" : 0
+		}
+	],
+	"missiles" : 8,
+	"flags" : "EF_TAKES_DAMAGE+EF_COMMON_FIGHTER",
+	"aiFlags" : "AIF_MISSILE_BOAT+AIF_DEFENSIVE"
+}

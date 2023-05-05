@@ -1,0 +1,240 @@
+{
+	"starSystems": [
+      {
+        "name": "Sol",
+        "side" : "SIDE_CSN",
+        "x": 840,
+        "y": 425
+      },
+      {
+        "name": "Alpha Centauri",
+        "side" : "SIDE_CSN",
+        "x": 860,
+        "y": 404
+      },
+      {
+        "name": "Ecuador Minor",
+        "side" : "SIDE_CSN",
+        "x": 831,
+        "y": 333
+      },
+      {
+        "name": "Angel",
+        "side" : "SIDE_CSN",
+        "x": 690,
+        "y": 305
+      },
+      {
+        "name": "Indigo",
+        "side" : "SIDE_CSN",
+        "x": 760,
+        "y": 270
+      },
+      {
+        "name": "Rex",
+        "side" : "SIDE_CSN",
+        "x": 834,
+        "y": 276
+      },
+      {
+        "name": "Gabriel",
+        "side" : "SIDE_CSN",
+        "x": 860,
+        "y": 170
+      },
+      {
+        "name": "Darlon",
+        "side" : "SIDE_CSN",
+        "x": 808,
+        "y": 190
+      },
+      {
+        "name": "Granada",
+        "side" : "SIDE_CSN",
+        "x": 741,
+        "y": 221
+      },
+      {
+        "name": "Parish",
+        "side" : "SIDE_CSN",
+        "x": 666,
+        "y": 261
+      },
+      {
+        "name": "Temper",
+        "side" : "SIDE_CSN",
+        "x": 595,
+        "y": 260
+      },
+      {
+        "name": "Lenon",
+        "side" : "SIDE_CSN",
+        "x": 655,
+        "y": 180
+      },
+      {
+        "name": "HD 21563010",
+        "side" : "SIDE_CSN",
+        "x": 813,
+        "y": 54
+      },
+      {
+        "name": "Trilliack",
+        "side" : "SIDE_UNF",
+        "x": 501,
+        "y": 312,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Alba",
+        "side" : "SIDE_UNF",
+        "x": 465,
+        "y": 235,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Aster",
+        "side" : "SIDE_UNF",
+        "x": 445,
+        "y": 145
+      },
+      {
+        "name": "Iliad",
+        "side" : "SIDE_UNF",
+        "x": 335,
+        "y": 135,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Warro",
+        "side" : "SIDE_UNF",
+        "x": 289,
+        "y": 216,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Coyote",
+        "side" : "SIDE_UNF",
+        "x": 325,
+        "y": 385,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Rothan",
+        "side" : "SIDE_UNF",
+        "x": 366,
+        "y": 298,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Donesta",
+        "side" : "SIDE_UNF",
+        "x": 527,
+        "y": 161
+      },
+      {
+        "name": "India",
+        "side" : "SIDE_UNF",
+        "x": 539,
+        "y": 427
+      },
+      {
+        "name": "Antomis",
+        "side" : "SIDE_UNF",
+        "x": 582,
+        "y": 115
+      },
+      {
+        "name": "Mace",
+        "side" : "SIDE_TZAC",
+        "x": 444,
+        "y": 359,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Clarke",
+        "side" : "SIDE_UNF",
+        "x": 398,
+        "y": 84,
+        "fallsToPandorans" : 1
+      },
+      {
+        "name": "Adetton",
+        "side" : "SIDE_PANDORAN",
+        "x": 228,
+        "y": 228
+      },
+      {
+        "name": "Atlante",
+        "side" : "SIDE_PANDORAN",
+        "x": 212,
+        "y": 85
+      },
+      {
+        "name": "Carthege",
+        "side" : "SIDE_PANDORAN",
+        "x": 163,
+        "y": 122
+      },
+      {
+        "name": "Codexa",
+        "side" : "SIDE_PANDORAN",
+        "x": 195,
+        "y": 101
+      },
+      {
+        "name": "Haylahe",
+        "side" : "SIDE_PANDORAN",
+        "x": 204,
+        "y": 132
+      },
+      {
+        "name": "Kethlan",
+        "side" : "SIDE_PANDORAN",
+        "x": 95,
+        "y": 95
+      },
+      {
+        "name": "Krasst",
+        "side" : "SIDE_PANDORAN",
+        "x": 135,
+        "y": 305
+      },
+      {
+        "name": "Mekel",
+        "side" : "SIDE_PANDORAN",
+        "x": 228,
+        "y": 113
+      },
+      {
+        "name": "Phylent",
+        "side" : "SIDE_PANDORAN",
+        "x": 275,
+        "y": 165
+      },
+      {
+        "name": "Sampi-Persei VII",
+        "side" : "SIDE_PANDORAN",
+        "x": 342,
+        "y": 182
+      },
+      {
+        "name": "Tigris",
+        "side" : "SIDE_PANDORAN",
+        "x": 269,
+        "y": 274
+      },
+      {
+        "name": "Troy",
+        "side" : "SIDE_PANDORAN",
+        "x": 107,
+        "y": 269
+      },
+      {
+        "name": "Pearl",
+        "side" : "SIDE_PANDORAN",
+        "x": 133,
+        "y": 215
+      }
+    ]
+}

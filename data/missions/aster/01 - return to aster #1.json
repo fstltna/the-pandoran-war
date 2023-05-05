@@ -1,0 +1,155 @@
+{
+	"name" : "Return to Aster",
+	"description" : "We've received word from CSN Florin that they have suffered a power failure, affecting the entire ship. The stranded vessel has attracted the attention of the Pandorans, who have already deployed shuttles and tugs to absorb it into their ranks. The Salty Wildcats will intercept and provide cover until Florin can affect repairs.",
+	"requires" : 30,
+	"background" : "gfx/backgrounds/background04.jpg",
+	"planet" : "gfx/planets/star.png",
+	"music" : "music/battle/track-3.mp3",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Protect CSN Florin",
+			"targetName" : "CSN Florin",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isCondition" : 1
+		},
+		{
+			"description" : "Destroy Pandoran shuttles and tugs",
+			"targetName" : "ShuttleTug",
+			"targetValue" : 12,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		},
+		{
+			"description" : "Defeat unidentified forces",
+			"targetName" : "Rebels",
+			"targetValue" : 12,
+			"targetType" : "TT_DESTROY",
+			"active" : 0
+		}
+	],
+	"player" : {
+		"type" : "Rook",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "Cdr. Shaun Black",
+		"squadron" : "Salty Wildcats",
+		"x" : 5,
+		"y" : 45
+	},
+	"fighters" : [
+		{
+			"types" : "TAF;Ray",
+			"side" : "SIDE_ALLIES",
+			"x" : 5,
+			"y" : 45,
+			"number" : 7,
+			"scatter" : 350
+		},
+		{
+			"groupName" : "ShuttleTug",
+			"types" : "INF Tug",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 25,
+			"number" : 6,
+			"aiFlags" : "AIF_MOVES_TO_LEADER+AIF_UNLIMITED_RANGE+AIF_DEFENSIVE"
+		},
+		{
+			"groupName" : "ShuttleTug",
+			"types" : "Shuttle",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 25,
+			"number" : 6,
+			"aiFlags" : "AIF_MOVES_TO_LEADER+AIF_UNLIMITED_RANGE+AIF_DEFENSIVE"
+		},
+		{
+			"types" : "Thunderhead;Jackal;Sphinx",
+			"side" : "SIDE_PANDORAN",
+			"x" : 25,
+			"y" : 30,
+			"number" : 4,
+			"flags" : "+EF_AI_LEADER",
+			"aiFlags" : "+AIF_UNLIMITED_RANGE"
+		},
+		{
+			"groupName" : "Rebels",
+			"types" : "Razor",
+			"side" : "SIDE_TZAC",
+			"x" : 10,
+			"y" : 51,
+			"number" : 4,
+			"aiFlags" : "+AIF_UNLIMITED_RANGE",
+			"scatter" : 500,
+			"active" : 0
+		},
+		{
+			"groupName" : "Rebels",
+			"types" : "Khepri",
+			"side" : "SIDE_TZAC",
+			"x" : 10,
+			"y" : 51,
+			"number" : 8,
+			"aiFlags" : "+AIF_UNLIMITED_RANGE+AIF_TARGET_FOCUS",
+			"scatter" : 500,
+			"active" : 0
+		}
+	],
+	"capitalShips" : [
+		{
+			"name" : "CSN Florin",
+			"types" : "CSN Corvette 01",
+			"side" : "SIDE_ALLIES",
+			"x" : 10,
+			"y" : 37,
+			"flags" : "+EF_AI_TARGET+EF_DISABLED+EF_MISSION_TARGET"
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 2",
+			"lines" : [
+				"MSG_BOX Black;Florin, this is Black of the Salty Wildcats, here to assist.",
+				"MSG_BOX CSN Florin;Glad to see you, Wildcats. The Pandorans arrived shortly before you did. We've got tugs and shuttles incoming.",
+				"MSG_BOX Black;Acknowledged, we'll secure the area while you get things up and running.",
+				"WAIT_MSG_BOX",
+				"ACTIVATE_OBJECTIVES Destroy Pandoran shuttles and tugs"
+			]
+		},
+		{
+			"function" : "ENEMIES_KILLED 16",
+			"lines" : [
+				"WAIT 2",
+				"MSG_BOX Black;Florin, Pandoran vessels have been dealt with.",
+				"MSG_BOX CSN Florin;Many thanks, Wildcats. We've identified the cause of the power outage. Should be no more than a few minutes before we can restart all systems.",
+				"WAIT_MSG_BOX",
+				"WAIT 10",
+				"MSG_BOX CSN Florin;Wildcats, we're picking up an incoming squadron.",
+				"MSG_BOX Black;More Pandoran tugs?",
+				"MSG_BOX CSN Florin;Negative. These appear to be non-aligned forces, fighters and bombers.",
+				"WAIT_MSG_BOX",
+				"WAIT 5",
+				"ACTIVATE_ENTITY_GROUPS Rebels",
+				"MSG_BOX CSN Florin;Incoming forces are on intercept vectors. We only need a few more minutes.",
+				"MSG_BOX Black;On it.",
+				"WAIT_MSG_BOX",
+				"ACTIVATE_OBJECTIVES Defeat unidentified forces"
+			]
+		},
+		{
+			"function" : "OBJECTIVES_COMPLETE 2",
+			"lines" : [
+				"WAIT 2",
+				"MSG_BOX Black;Looks like that's all of them.",
+				"MSG_BOX CSN Florin;Those were Kingdom of Tzac fighters. We've heard reports of them being active in some Confederation systems.",
+				"MSG_BOX Black;Would appear that Christabel is finally ready to make good on all her threats. Great, so now we have both her AND the Pandorans to deal with.",
+				"MSG_BOX CSN Florin;It never rains ...",
+				"MSG_BOX CSN Florin;We're starting systems up again. Once we've completed pre-jump checks we're heading for Temper. Thank you for your assistance.",
+				"MSG_BOX Black;We'll meet you there.",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}

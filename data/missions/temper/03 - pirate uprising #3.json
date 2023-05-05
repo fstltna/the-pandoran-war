@@ -1,0 +1,106 @@
+{
+	"name" : "Pirate Uprising #3",
+	"description" : "Allied intelligence have managed to locate one of the pirate ring lieutenants. We need to bring this man in alive, as he could provide us with further useful information that will allow us to track down and eliminate high ranking individuals. You will be piloting a Ray, and will need to use your Mag cannons to disable the target. Do not destroy the lieutenant's Dart.",
+	"requires" : 3,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/spirit.png",
+	"music" : "music/battle/battleThemeA.mp3",
+	"manualComplete" : 1,
+	"objectives" : [
+		{
+			"description" : "Capture pirate lieutenant",
+			"targetName" : "Pirate Lieutenant",
+			"targetValue" : 1,
+			"targetType" : "TT_DISABLE"
+		},
+		{
+			"description" : "Destroy all remaining opposition",
+			"targetName" : "Dart",
+			"targetValue" : 12,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Do not kill pirate lieutenant",
+			"targetName" : "Pirate Lieutenant",
+			"targetValue" : 1,
+			"targetType" : "TT_DESTROY",
+			"isCondition" : 1
+		},
+		{
+			"description" : "Do not let pirate lieutenant escape",
+			"targetName" : "Pirate Lieutenant",
+			"targetValue" : 1,
+			"targetType" : "TT_ESCAPED",
+			"isCondition" : 1
+		}
+	],
+	"player" : {
+		"type" : "Ray",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "Lt. Cdr. Seth McLeod",
+		"squadron" : "Steel Bulls"
+	},
+	"fighters" : [
+		{
+			"name" : "Pirate Lieutenant",
+			"types" : "Dart",
+			"side" : "SIDE_PIRATE",
+			"x" : 12,
+			"y" : 25,
+			"flags" : "+EF_NO_KILL+EF_MUST_DISABLE+EF_MISSION_TARGET",
+			"aiFlags" : "+AIF_RETREATS"
+		},
+		{
+			"types" : "TAF",
+			"name" : "Strickland",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 300,
+			"flags" : "+EF_IMMORTAL"
+		},
+		{
+			"types" : "TAF",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 300
+		},
+		{
+			"name" : "Dart",
+			"types" : "Dart",
+			"number" : 12,
+			"side" : "SIDE_PIRATE",
+			"x" : 15,
+			"y" : 25,
+			"scatter" : 1000
+		}
+	],
+	"entities" : [
+		{
+			"name" : "Jumpgate",
+			"type" : "ET_JUMPGATE",
+			"x" : 26,
+			"y" : 25
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Strickland;Seth, the lieutenant's Dart should be tagged on your HUD. Disable that ship as soon as possible.",
+				"MSG_BOX McLeod;Got it.",
+				"MSG_BOX Strickland;The rest of us will take down his buddies. Watch your stray fire around the mission target."
+			]
+		},
+		{
+			"function" : "ALL_OBJECTIVES_COMPLETE",
+			"lines" : [
+				"WAIT 2",
+				"MSG_BOX Strickland;Control, this is Strickland. Target has been suppressed, all other threats eliminated. Will await pickup.",
+				"WAIT_MSG_BOX",
+				"COMPLETE_MISSION"
+			]
+		}
+	]
+}

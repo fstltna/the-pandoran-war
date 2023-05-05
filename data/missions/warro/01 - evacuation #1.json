@@ -1,0 +1,67 @@
+{
+	"name" : "Evacuation #1",
+	"description" : "As already confirmed by Neal Stockwell, the evacuation of Oracle IX in response to the supernova has not be progressing as rapidly as many would like. And now, with the Pandoran army on the move, we need to quicken the pace. A number of civilian stragglers has been identified near to Oracle IX, who are in need of escort to the evacuation point. Your objective is to locate all the civilian craft in the area, and bring them in. No enemy forces are expected, but it is best to be on your guard.",
+	"requires" : 3,
+	"background" : "gfx/backgrounds/background03.jpg",
+	"planet" : "gfx/planets/oracleIX.png",
+	"music" : "music/battle/determination.mp3",
+	"objectives" : [
+		{
+			"description" : "Rescue all civilians",
+			"targetName" : "Civilian",
+			"targetValue" : 8,
+			"targetType" : "TT_ESCAPED"
+		}
+	],
+	"player" : {
+		"pilot" : "1st Lt. Eliza Gaskin",
+		"squadron" : "The ABCs",
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES"
+	},
+	"fighters" : [
+		{
+			"number" : 3,
+			"types" : "Nymph",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 25,
+			"scatter" : 3000
+		},
+		{
+			"types" : "Civilian",
+			"number" : 4,
+			"name" : "Civilian",
+			"side" : "SIDE_ALLIES",
+			"x" : 18,
+			"y" : 25,
+			"scatter" : 1500
+		},
+		{
+			"types" : "Civilian",
+			"number" : 4,
+			"name" : "Civilian",
+			"side" : "SIDE_ALLIES",
+			"x" : 32,
+			"y" : 25,
+			"scatter" : 1500
+		}
+	],
+	"entities" : [
+		{
+			"name" : "Jumpgate",
+			"type" : "ET_JUMPGATE",
+			"x" : 25,
+			"y" : 25
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 1",
+			"lines" : [
+				"MSG_BOX Control;ABCs, this is Control. Round up those civilians and escort them to the jumpgate as quick as you can.",
+				"MSG_BOX Control;We're not expecting any opposition, but be prepared to engage hostiles if needed."
+			]
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+	"name" : "Iliad Defence #1",
+	"description" : "The Pandorans have commenced their attack on our home, and we must act immediately to defend ourselves. A wave of bombers is heading towards one of our starports. They need to be taken down with haste, before they get in range. They may only be being escorted by Jackals, but bare in a mind that the Pandoran pilots are highly skilled, and unrelenting in battle.",
+	"requires" : 13,
+	"background" : "gfx/backgrounds/background01.jpg",
+	"planet" : "gfx/planets/diso.png",
+	"music" : "music/battle/track-3.mp3",
+	"objectives" : [
+		{
+			"description" : "Destroy incoming bombers",
+			"targetName" : "Scarab",
+			"targetValue" : 3,
+			"targetType" : "TT_DESTROY"
+		},
+		{
+			"description" : "Eliminate all other threats",
+			"targetName" : "Pandoran",
+			"targetValue" : 9,
+			"targetType" : "TT_DESTROY"
+		}
+	],
+	"player" : {
+		"type" : "Firefly",
+		"side" : "SIDE_ALLIES",
+		"pilot" : "1st Lt. Opal Williams",
+		"squadron" : "Agamemnon's 1st",
+		"x" : 25,
+		"y" : 45
+	},
+	"fighters" : [
+		{
+			"name" : "Scarab",
+			"types" : "Scarab",
+			"side" : "SIDE_PANDORAN",
+			"x" : 27,
+			"y" : 35,
+			"flags" : "+EF_MISSION_TARGET"
+		},
+		{
+			"name" : "Scarab",
+			"types" : "Scarab",
+			"side" : "SIDE_PANDORAN",
+			"x" : 20,
+			"y" : 30,
+			"flags" : "+EF_MISSION_TARGET"
+		},
+		{
+			"name" : "Scarab",
+			"types" : "Scarab",
+			"side" : "SIDE_PANDORAN",
+			"x" : 35,
+			"y" : 25,
+			"flags" : "+EF_MISSION_TARGET"
+		},
+		{
+			"types" : "Firefly;Nymph;Leopard",
+			"side" : "SIDE_ALLIES",
+			"x" : 25,
+			"y" : 45,
+			"number" : 8,
+			"scatter" : 1000
+		},
+		{
+			"groupName" : "Pandoran",
+			"types" : "Jackal",
+			"side" : "SIDE_PANDORAN",
+			"x" : 27,
+			"y" : 35,
+			"number" : 3,
+			"scatter" : 1000
+		},
+		{
+			"groupName" : "Pandoran",
+			"types" : "Jackal",
+			"side" : "SIDE_PANDORAN",
+			"x" : 20,
+			"y" : 30,
+			"number" : 3,
+			"scatter" : 1000
+		},
+		{
+			"groupName" : "Pandoran",
+			"types" : "Jackal",
+			"side" : "SIDE_PANDORAN",
+			"x" : 35,
+			"y" : 25,
+			"number" : 3,
+			"scatter" : 1000
+		}
+	],
+	"script" : [
+		{
+			"function" : "TIME 2",
+			"lines" : [
+				"MSG_BOX Williams;Recommending taking down the escorts before engaging the bombers. Just watch out for their rockets.",
+				"MSG_BOX Williams;Be warned, people, these Pandorans are said to be relentless in battle."
+			]
+		}
+	]
+}
